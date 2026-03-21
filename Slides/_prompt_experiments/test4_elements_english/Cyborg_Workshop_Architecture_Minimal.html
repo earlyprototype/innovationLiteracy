@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyborg Workshop Architecture (Minimal)</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111827;
+            --accent-color: #000000;
+            --sidebar-bg: #f9fafb;
+            --sidebar-text: #4b5563;
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 260px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 2.5rem 2rem 1rem;
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.1rem;
+            margin: 0;
+            color: var(--text-color);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .nav-links li {
+            margin: 0.25rem 1rem;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #f3f4f6;
+            color: var(--text-color);
+        }
+
+        .nav-links a.active {
+            background-color: #e5e7eb;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 260px;
+            padding: 4rem;
+            width: calc(100% - 260px);
+            box-sizing: border-box;
+            max-width: 1200px;
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .description {
+            font-size: 1.05rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 65ch;
+            line-height: 1.7;
+        }
+
+        .diagram-container {
+            background: #ffffff;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Structure Review</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#cycle" class="active" onclick="showSection('cycle')">The Design Cycle</a></li>
+            <li><a href="#assembly" onclick="showSection('assembly')">Prompt Assembly</a></li>
+            <li><a href="#holodeck" onclick="showSection('holodeck')">System Architecture</a></li>
+            <li><a href="#data" onclick="showSection('data')">Context Data Model</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <!-- SECTION 1: FLOWCHART -->
+        <section id="cycle" class="content-section active">
+            <h2>The Design Cycle</h2>
+            <div class="description">
+                The sequence of the 5 design stages and how data flows from human interview through AI generation and back to human critique.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    graph TD
+                        classDef human fill:#f9fafb,stroke:#e5e7eb,stroke-width:1px;
+                        classDef ai fill:#f3f4f6,stroke:#9ca3af,stroke-width:1px;
+                        classDef artifact fill:#ffffff,stroke:#000000,stroke-dasharray: 4 4;
+
+                        subgraph Human
+                            A[1. Empathise]:::human --> B[2. Define]:::human
+                            B --> C[3. Ideate]:::human
+                        end
+
+                        subgraph Machine
+                            C --> D[4. Prototype]:::human
+                            D --> E{NotebookLM}:::ai
+                            E -->|Render| F[Wireframe]:::artifact
+                        end
+
+                        subgraph Test
+                            F --> G[5. Evaluate]:::human
+                            G -->|Logic Error| C
+                            G -->|Prompt Error| D
+                            G -->|Pass| H([Final]):::artifact
+                        end
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SEQUENCE -->
+        <section id="assembly" class="content-section">
+            <h2>Prompt Assembly Process</h2>
+            <div class="description">
+                The workflow merging User Context Profile, Mural Flow, Style Guide, and Design System into a master prompt for NotebookLM.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    sequenceDiagram
+                        actor User
+                        participant Map as Logic Map
+                        participant Sources as Static Constraints
+                        participant Prompt as Master Prompt
+                        participant AI as Model
+
+                        User->>Map: Extract Logic
+                        User->>Sources: Extract Style & Components
+                        
+                        User->>Prompt: Combine Context + Logic + Constraints
+                        
+                        Prompt->>AI: Execute Prompt
+                        AI-->>User: Output Artifact
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: C4 ARCHITECTURE -->
+        <section id="holodeck" class="content-section">
+            <h2>System Architecture</h2>
+            <div class="description">
+                The architectural components of the prompt system: Source Documents acting as base constraints, and User Context as dynamic input.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    C4Context
+                        title The Environment
+
+                        Person(user, "Participant")
+                        
+                        Boundary(sys, "NotebookLM") {
+                            System(llm, "LLM Engine")
+                            
+                            Boundary(src, "Constraints") {
+                                SystemDb(style, "Style Guide")
+                                SystemDb(comp, "Component Lib")
+                            }
+                            
+                            Boundary(dyn, "Input") {
+                                System_Ext(ctx, "Context Profile")
+                            }
+                        }
+
+                        Rel(user, ctx, "Writes")
+                        Rel(ctx, llm, "Provides variables")
+                        Rel(style, llm, "Constrains")
+                        Rel(comp, llm, "Constrains")
+                        Rel(user, llm, "Prompts")
+                        
+                        System_Ext(out, "Output Artifact")
+                        Rel(llm, out, "Generates")
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CLASS DIAGRAM -->
+        <section id="data" class="content-section">
+            <h2>Context Data Model</h2>
+            <div class="description">
+                The structure of the data generated in the Define stage (Environment, Cognitive Load, Specific Goal, Friction Point).
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    classDiagram
+                        class Profile {
+                            +String workflow
+                        }
+
+                        class Environment {
+                            +String location
+                            +Int timePressure
+                        }
+
+                        class CognitiveLoad {
+                            +String distractions
+                        }
+
+                        class Friction {
+                            +String trigger
+                            +String emotion
+                        }
+
+                        Profile *-- Environment
+                        Profile *-- CognitiveLoad
+                        Profile *-- Friction
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Initialize Mermaid with Neutral/Minimal Theme
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            fontFamily: 'Inter, sans-serif'
+        });
+
+        // Simple navigation script
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            
+            // Remove active class from all links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show target section and set link active
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
