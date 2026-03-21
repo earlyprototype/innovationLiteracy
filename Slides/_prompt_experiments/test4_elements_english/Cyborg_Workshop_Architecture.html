@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vibe-Coding Design Cycle</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #E0E0D0; /* The warm grey/beige from your earlier spec */
+            --text-color: #333333;
+            --accent-color: #DFFF00; /* Neon yellow */
+            --sidebar-bg: #1A1A1A;
+            --sidebar-text: #F5F5F5;
+            --border-color: rgba(51, 51, 51, 0.2);
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid var(--accent-color);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid rgba(223, 255, 0, 0.2);
+        }
+
+        .sidebar-header h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: rgba(245, 245, 245, 0.7);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--sidebar-text);
+            background-color: rgba(223, 255, 0, 0.05);
+            border-left-color: var(--accent-color);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 280px;
+            padding: 4rem;
+            width: calc(100% - 280px);
+            box-sizing: border-box;
+            background-image: 
+                linear-gradient(var(--border-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+            background-size: 40px 40px; /* Blueprint grid effect */
+        }
+
+        .content-section {
+            display: none;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(224, 224, 208, 0.9);
+            padding: 2rem;
+            box-shadow: 10px 10px 0px var(--sidebar-bg);
+            border: 2px solid var(--sidebar-bg);
+            margin-bottom: 4rem;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--sidebar-bg);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .diagram-container {
+            background: white;
+            padding: 2rem;
+            border: 2px solid var(--sidebar-bg);
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        /* Mermaid Overrides for Theme */
+        .mermaid {
+            font-family: var(--font-body);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 2rem;
+            }
+            .content-section {
+                box-shadow: 5px 5px 0px var(--sidebar-bg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Cyborg Design</h1>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; color: rgba(245,245,245,0.5);">Workshop Architecture</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#cycle" class="active" onclick="showSection('cycle')">01. The Design Cycle</a></li>
+            <li><a href="#assembly" onclick="showSection('assembly')">02. Prompt Assembly</a></li>
+            <li><a href="#holodeck" onclick="showSection('holodeck')">03. System Architecture</a></li>
+            <li><a href="#data" onclick="showSection('data')">04. Context Data Model</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <!-- SECTION 1: FLOWCHART -->
+        <section id="cycle" class="content-section active">
+            <h2>01. The Vibe-Coding Cycle</h2>
+            <div class="description">
+                The sequence of the 5 design stages. Notice the strict boundary where human synthesis ends and AI rendering begins. The feedback loop targets human logic, not the AI tool.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    graph TD
+                        %% Styling
+                        classDef human fill:#ffffff,stroke:#333,stroke-width:2px;
+                        classDef ai fill:#DFFF00,stroke:#333,stroke-width:2px;
+                        classDef artifact fill:#eee,stroke:#333,stroke-dasharray: 5 5;
+
+                        subgraph HUMAN_PHASE ["Human Empathy & Logic"]
+                            A[1. EMPATHISE<br/>Interview Partner]:::human --> B[2. DEFINE<br/>Synthesize Context]:::human
+                            B --> C[3. IDEATE<br/>Map Logical Flow in Mural]:::human
+                        end
+
+                        subgraph CYBORG_PHASE ["Machine Rendering"]
+                            C --> D[4. PROTOTYPE<br/>Construct Strict Prompt]:::human
+                            D --> E{NotebookLM<br/>Generation}:::ai
+                            E -->|Renders| F[Markdown Wireframe /<br/>Text App]:::artifact
+                        end
+
+                        subgraph EVALUATION ["Logic Critique"]
+                            F --> G[5. TEST<br/>Partner evaluates Logic]:::human
+                            G -->|Logic Fails| C
+                            G -->|Prompt Fails| D
+                            G -->|Success| H([Final Verified Structure]):::artifact
+                        end
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SEQUENCE -->
+        <section id="assembly" class="content-section">
+            <h2>02. Prompt Assembly Process</h2>
+            <div class="description">
+                How the abstract human data is merged with strict system constraints to create an executable master prompt that prevents AI hallucination.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    sequenceDiagram
+                        autonumber
+                        actor Participant
+                        participant Mural as Logic Map (Mural)
+                        participant UI as Component Library
+                        participant Style as Style Guide
+                        participant Prompt as Master Prompt
+                        participant AI as NotebookLM
+
+                        Participant->>Mural: Define 'Objects' & 'Verbs'
+                        Participant->>UI: Select allowable UI elements
+                        Participant->>Style: Retrieve visual constraints
+                        
+                        Note over Participant, Prompt: The Cognitive Load
+                        Participant->>Prompt: Combine: Persona + Constraints + Logic Map
+                        
+                        Prompt->>AI: Submit structured instructions
+                        
+                        AI-->>Participant: Generate low-fi interactive artifact
+                        
+                        Note over Participant, AI: If output fails, the Participant fixes the Prompt/Map, NOT the code.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: C4 ARCHITECTURE -->
+        <section id="holodeck" class="content-section">
+            <h2>03. The "Holodeck" Architecture</h2>
+            <div class="description">
+                The structural mapping of the NotebookLM environment. Showing participants that the AI is an empty room until they define the physics (Sources).
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    C4Context
+                        title System Context: The Prompt Holodeck
+
+                        Person(user, "Participant", "The human architect holding empathy data")
+                        
+                        Boundary(nl, "NotebookLM / AI Workspace") {
+                            System(ai, "The LLM", "The literal rendering engine")
+                            
+                            Boundary(sources, "Uploaded Source Documents (Constraints)") {
+                                SystemDb(style, "Style Guide", "JSON/INI: Visual rules")
+                                SystemDb(lib, "Component Library", "Markdown: Allowable UI")
+                            }
+                            
+                            Boundary(dynamic, "Dynamic Input") {
+                                System_Ext(context, "User Context Profile", "The empathy data")
+                            }
+                        }
+
+                        Rel(user, context, "Synthesizes from interview")
+                        Rel(context, ai, "Provides the problem to solve")
+                        Rel(style, ai, "Constrains aesthetic")
+                        Rel(lib, ai, "Constrains functional parts")
+                        Rel(user, ai, "Writes Assembly Prompt")
+                        
+                        System_Ext(output, "Structural Artifact", "The generated wireframe/map")
+                        Rel(ai, output, "Renders blindly based on constraints")
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CLASS DIAGRAM -->
+        <section id="data" class="content-section">
+            <h2>04. The User Context Profile</h2>
+            <div class="description">
+                Transforming the messy, emotional interview from the Empathise stage into a structured data model the machine can process during the Define stage.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    classDiagram
+                        class UserContextProfile {
+                            +String personaName
+                            +String targetWorkflow
+                            +identifyEmotionalFriction()
+                            +defineGoal()
+                        }
+
+                        class Environment {
+                            +String softwareUsed
+                            +String physicalLocation
+                            +int timePressureLevel
+                        }
+
+                        class CognitiveLoad {
+                            +String distractions
+                            +String competingPriorities
+                            +assessMentalState()
+                        }
+
+                        class FrictionPoint {
+                            +String exactTrigger
+                            +String workaroundUsed
+                            +String emotionalResponse
+                        }
+
+                        UserContextProfile "1" *-- "1" Environment : operates within
+                        UserContextProfile "1" *-- "1" CognitiveLoad : experiences
+                        UserContextProfile "1" *-- "1..*" FrictionPoint : suffers from
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#ffffff',
+                primaryTextColor: '#333333',
+                primaryBorderColor: '#333333',
+                lineColor: '#333333',
+                secondaryColor: '#DFFF00',
+                tertiaryColor: '#E0E0D0'
+            },
+            fontFamily: 'Inter, sans-serif'
+        });
+
+        // Simple navigation script
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            
+            // Remove active class from all links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show target section and set link active
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
