@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyborg Workshop Architecture (Professional)</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --text-color: #24292e;
+            --primary-color: #0366d6;
+            --sidebar-bg: #ffffff;
+            --sidebar-text: #24292e;
+            --border-color: #e1e4e8;
+            --font-main: 'Segoe UI', 'Open Sans', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.25rem;
+            margin: 0;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .nav-links li {
+            margin: 0.2rem 1rem;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 0.6rem 1rem;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #f1f8ff;
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            background-color: #e6f2ff;
+            color: var(--primary-color);
+            font-weight: 600;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 250px;
+            padding: 3rem;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+            max-width: 1100px;
+        }
+
+        .content-section {
+            display: none;
+            background: #ffffff;
+            padding: 2.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .description {
+            font-size: 1.05rem;
+            color: #586069;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .diagram-container {
+            background: #fafbfc;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                box-shadow: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Architecture Overview</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#cycle" class="active" onclick="showSection('cycle')">Design Cycle Workflow</a></li>
+            <li><a href="#assembly" onclick="showSection('assembly')">Prompt Assembly</a></li>
+            <li><a href="#holodeck" onclick="showSection('holodeck')">System Architecture</a></li>
+            <li><a href="#data" onclick="showSection('data')">Context Data Model</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <!-- SECTION 1: FLOWCHART -->
+        <section id="cycle" class="content-section active">
+            <h2>Design Cycle Workflow</h2>
+            <div class="description">
+                The sequence of the 5 design stages and how data flows from human interview through AI generation and back to human critique.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    graph TD
+                        classDef default fill:#f1f8ff,stroke:#0366d6,stroke-width:1px;
+                        classDef ai fill:#e6ffed,stroke:#28a745,stroke-width:1px;
+                        classDef output fill:#ffffff,stroke:#24292e,stroke-dasharray: 5 5;
+
+                        subgraph Analysis Phase
+                            A[1. Empathise] --> B[2. Define]
+                            B --> C[3. Ideate]
+                        end
+
+                        subgraph Generation Phase
+                            C --> D[4. Prototype]
+                            D --> E{NotebookLM}:::ai
+                            E -->|Generate| F[Markdown Prototype]:::output
+                        end
+
+                        subgraph Validation Phase
+                            F --> G[5. Test]
+                            G -->|Refine Logic| C
+                            G -->|Refine Prompt| D
+                            G -->|Approved| H([Final Delivery]):::output
+                        end
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SEQUENCE -->
+        <section id="assembly" class="content-section">
+            <h2>Prompt Assembly Process</h2>
+            <div class="description">
+                The workflow merging User Context Profile, Mural Flow, Style Guide, and Design System into a master prompt for NotebookLM.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    sequenceDiagram
+                        actor Analyst
+                        participant Mural as Mural Logic
+                        participant UI as UI Library
+                        participant Style as Style Guide
+                        participant Builder as Prompt Builder
+                        participant Engine as AI Engine
+
+                        Analyst->>Mural: Define Logic Flow
+                        Analyst->>UI: Select Components
+                        Analyst->>Style: Define Aesthetics
+                        
+                        Analyst->>Builder: Synthesize Inputs
+                        
+                        Builder->>Engine: Execute Generation Request
+                        Engine-->>Analyst: Deliver Prototype
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: C4 ARCHITECTURE -->
+        <section id="holodeck" class="content-section">
+            <h2>System Architecture</h2>
+            <div class="description">
+                The architectural components of the prompt system: Source Documents acting as base constraints, and User Context as dynamic input.
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    C4Context
+                        title Context Diagram: AI Generation Environment
+
+                        Person(user, "Participant Analyst")
+                        
+                        Boundary(system, "Generation Environment") {
+                            System(llm, "LLM Processing Engine")
+                            
+                            Boundary(static, "Static Constraints") {
+                                SystemDb(style, "Style Guidelines")
+                                SystemDb(comp, "Component Definitions")
+                            }
+                            
+                            Boundary(dynamic, "Dynamic Parameters") {
+                                System_Ext(context, "User Context Profile")
+                            }
+                        }
+
+                        Rel(user, context, "Defines Parameters")
+                        Rel(context, llm, "Supplies Variables")
+                        Rel(style, llm, "Supplies Constraints")
+                        Rel(comp, llm, "Supplies Constraints")
+                        Rel(user, llm, "Initiates Processing")
+                        
+                        System_Ext(output, "Generated Output")
+                        Rel(llm, output, "Delivers File")
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CLASS DIAGRAM -->
+        <section id="data" class="content-section">
+            <h2>Context Data Model</h2>
+            <div class="description">
+                The structure of the data generated in the Define stage (Environment, Cognitive Load, Specific Goal, Friction Point).
+            </div>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    classDiagram
+                        class UserContext {
+                            +String Role
+                            +String TargetOutcome
+                        }
+
+                        class OperatingEnvironment {
+                            +String PrimaryTool
+                            +String Context
+                        }
+
+                        class CognitiveFactors {
+                            +String PrimaryDistraction
+                            +String LoadLevel
+                        }
+
+                        class FrictionEvent {
+                            +String Trigger
+                            +String EmotionalImpact
+                        }
+
+                        UserContext "1" *-- "1" OperatingEnvironment
+                        UserContext "1" *-- "1" CognitiveFactors
+                        UserContext "1" *-- "1..*" FrictionEvent
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Initialize Mermaid with Default Theme
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            fontFamily: 'Segoe UI, sans-serif'
+        });
+
+        // Simple navigation script
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            
+            // Remove active class from all links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show target section and set link active
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
