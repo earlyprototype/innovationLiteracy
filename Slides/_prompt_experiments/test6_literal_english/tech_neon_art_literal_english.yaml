@@ -1,0 +1,27 @@
+# presentation_design_spec_neon_collage_literal_english.yaml
+# Style: Design / Tech Art / Avant-garde
+# Concept: Design drawings that feel intelligent, art taste
+
+overall_design_settings:
+  language: "British English"
+  tone: "Avant-garde, structural, intelligent, art, future-oriented"
+  visual_identity:
+    background_colour: "Warm grey / Beige (#E0E0D0) - Paper-like matte texture"
+    text_colour: "Charcoal grey (#333333) - Not pure black"
+    accent_colour: "Neon yellow (#DFFF00) - Used for geometric shapes"
+    line_colour: "Ultra-thin grey lines - Blueprint-like auxiliary lines"
+  typography:
+    headings: "Mix of serif and sans-serif typefaces."
+    body_text: "Small size, positioned along grid."
+    numbers: "Typewriter-style font."
+
+slide_composition_patterns:
+  cover_triple_collage: "Grid lines dividing the screen into three sections. Human face photos converted to monochrome and placed as cutouts. Neon yellow circles and squares layered behind and in front of the person. Concentric circles (target scope-like line art) positioned at the person's centre. Background colour is warm grey/beige (#E0E0D0)."
+  analysis_technical_drawing: "Background colour is warm grey/beige (#E0E0D0), fine grid like graph paper. Products or concepts drawn as wireframes, partially filled with accent colour. Ultra-thin leader lines extended to describe details like a technical drawing."
+  process_geometric_connection: "Background colour is warm grey/beige (#E0E0D0). Place circles, squares, and triangles in accent colour. Connect shapes with dotted and dashed lines to express logical flow. Use portions of shapes as masks to embed monochrome photos inside."
+  data_radar_chart_art: "Background colour is warm grey/beige (#E0E0D0). Place a spider-web-like radar chart filling the entire screen. Draw data with thick accent colour lines. Layer old map or blueprint-like textures thinly over the background."
+
+design_rules:
+  - "colour_limitation": "Strictly adhere to 3-colour composition: warm grey/beige (#E0E0D0) - background, monochrome (photos), accent colour (shapes)."
+  - "collage": "Never place photos as rectangles; always process as cutouts and blend them into the background."
+  - "layering": "Layer in this order: background grid lines → accent shapes → monochrome photos → foreground text."

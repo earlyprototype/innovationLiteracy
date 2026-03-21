@@ -1,0 +1,24 @@
+# tech_neon_art_minimal_english.yaml
+# Ultra-concise English version
+
+language: "British English"
+tone: "Avant-garde technical"
+
+colours:
+  background: "Warm beige (#E0E0D0)"
+  text: "Charcoal (#333333)"
+  accent: "Neon yellow (#DFFF00)"
+  grid: "Thin grey"
+
+typography: "Mixed serif/sans-serif. Small body text on grid. Typewriter numerals."
+
+layouts:
+  cover: "Grid backdrop. Monochrome face cutout centred. Yellow circle behind. Concentric target overlay."
+  technical: "Grid background (#E0E0D0). Wireframe drawings with yellow fill. Leader lines annotate like blueprints."
+  process: "Yellow geometric shapes (circles, squares, triangles) connected by dashed lines. Monochrome photos masked inside shapes. Background (#E0E0D0)."
+  data: "Radar chart fills screen. Yellow line weights. Blueprint texture overlay. Background (#E0E0D0)."
+
+rules:
+  - "3 colours only: beige background, monochrome photos, yellow shapes"
+  - "Photos always cutout, never rectangular"
+  - "Layer order: grid → yellow shapes → photos → text"

@@ -1,0 +1,31 @@
+ 
+ Style: Design for Innovation / Tech Art / Avant-garde
+ Concept: Innovation design drawings, art aesthetic
+
+
+overall_design_settings:
+  language: "British English"
+  tone: "Avant-garde, structural, intelligent, art, future-oriented. Standalone reference material."
+  visual_identity:
+    background_colour: "Warm grey / Beige (#E0E0D0) - Paper-like matte texture"
+    text_colour: "Charcoal grey (#333333) - Not pure black"
+    accent_colour: "Neon yellow (#DFFF00) - Used for geometric shapes"
+    line_colour: "Ultra-thin grey lines - Blueprint-like auxiliary lines"
+  typography:
+    headings: "Mix of serif and sans-serif typefaces."
+    body_text: "Small size, positioned along grid."
+    numbers: "Typewriter-style font."
+
+slide_composition_patterns:
+  title_card: "Background warm grey/beige (#E0E0D0) with graph grid. Element name in large serif on left. Metadata ('Element 01 of 11', 'The What') in tiny typography. Monochrome profile photo cutout, enclosed by neon yellow (#DFFF00) circle. Concentric target overlay on face centre."
+  definition: "Background warm grey/beige (#E0E0D0) with fine grid. One-line definition statement in bold. Concept abstracted as geometric shapes: neon yellow (#DFFF00) hexagon, square, triangle combined with definition keywords at centre. Leader lines annotate each keyword."
+  why_it_matters: "Background warm grey/beige (#E0E0D0) with fine grid. Split visual. Left side: chaos scenario (arrows everywhere, misalignment). Right side: clarity scenario (structured flow, alignment). Neon yellow (#DFFF00) used to show contrast and highlight benefits. Clean before/after narrative."
+  in_practice: "Background warm grey/beige (#E0E0D0). Multiple frameworks shown side-by-side. Each depicted as structural diagram or wireframe. Neon yellow (#DFFF00) highlights commonalities. Technical drawing style labels. Emphasis on structural patterns."
+  key_distinctions: "Background warm grey/beige (#E0E0D0). Screen split by ultra-thin vertical line. Left side: target element. Right side: commonly confused adjacent element. Each depicted as wireframe structural diagram. Neon yellow (#DFFF00) highlights or × marks show differences. Technical annotations clarify boundaries."
+  further_learning: "Background warm grey/beige (#E0E0D0) with fine grid. Hierarchical list of resources. Top section: key frameworks. Bottom section: forward pointer to next element. Each item with neon yellow (#DFFF00) bullet point or geometric marker. Small typography."
+
+design_rules:
+  - "colour_limitation": "Strictly adhere to 3-colour composition: warm grey/beige (#E0E0D0) - background, monochrome (photos), neon yellow (#DFFF00) - shapes."
+  - "collage": "Never place photos as rectangles; always process as cutouts and blend into background."
+  - "layering": "Layer in order: background grid → neon yellow (#DFFF00) shapes → monochrome photos → foreground text."
+  - "source_fidelity": "Prioritise Element definition files as primary authority. Slides must be standalone and comprehensible without workshop context."
