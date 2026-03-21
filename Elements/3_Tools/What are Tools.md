@@ -8,7 +8,9 @@ Tools are the physical objects and useful technologies that enable innovation wo
 
 Innovation requires practical enablers. The right tools make previously impossible work feasible - digital whiteboards enable remote collaboration, AI assistants expand observation and ideation capacity, physical prototyping materials make ideas tangible. 
 
-Without appropriate tools, even well-designed processes stall. With the wrong tools, teams waste effort fighting infrastructure rather than solving problems. Tool literacy means knowing what's available, when each tool is useful, and how to select appropriate tools for the task at hand.
+Without appropriate tools, even well-designed processes stall. With the wrong tools, teams waste energy fighting infrastructure when they should be solving problems. 
+
+The most common failure: mismatched tool fidelity. High-fidelity digital tools used too early force premature convergence. Low-fidelity tools used too late fail to provide the rigour needed for evaluation. Tool selection is process protection - matching the tool's constraints to the cognitive demands of the current phase.
 
 ## How It Shows Up in Practice
 
@@ -37,32 +39,16 @@ Without appropriate tools, even well-designed processes stall. With the wrong to
 - Prototyping software (Figma, Sketch)
 - Analytics platforms (Google Analytics, Hotjar)
 
-## In This Workshop
-
-Tools appear throughout:
-
-**Session 1 Morning:**
-- Miro/Mural introduced in opening "Draw Your Ideal Innovation Process" exercise
-- Physical prototyping materials used in Wallet Project
-
-**Session 1 Afternoon:**
-- Problem Space Map template (digital or print) introduced for homework
-- Multiple tool examples referenced during Intervention Speed-Dating
-
-Participants experience tools in action before we name them explicitly. The focus is on practical use, not theoretical knowledge.
-
 ## Further Reading
 
 **Tool Directories and Guides:**
-- Miro/Mural Academy - Collaboration platform best practices
-- AI Prompts for Innovation - Guides on using ChatGPT/Claude for research
-- Prototyping Materials Guide - d.school recommendations
-- Digital Workspace Design - Structuring remote collaboration
+- [Miro Academy](https://academy.miro.com/) and [Mural Learning](https://learning.mural.co/) - Collaboration platform best practices
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) - Official guide and best practices for structuring prompts
+- [Getting Started with Google NotebookLM](https://blog.google/technology/ai/notebooklm-beginner-tips) - Official guide on using NotebookLM for document synthesis
+- [d.school "This Is a Prototype"](https://dschool.stanford.edu/book-collections/this-is-a-prototype) - Prototyping materials and mindset guide
 
 **Next Element:** Skills and Competencies (Element 4) - the human capabilities required to use tools and execute process
 
 ---
 
 _Element: Tools_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_

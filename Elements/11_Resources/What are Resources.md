@@ -55,21 +55,11 @@ Value articulation matched to different audiences:
 - External stakeholders and funders: learning outputs, demonstrated impact, pipeline potential
 - Clients and partners: capability, credibility, responsiveness to emerging challenges
 
-## In This Workshop
-
-**Session 1:**  
-Resource requirements surface implicitly throughout - prototyping materials needed for Wallet Project, time protection for process to work, facilitation resource visible through workshop itself.
-
-**Session 1 Afternoon:**  
-Failure analysis surfaces resource failures in real-world examples: "What resources were missing? What was promised but reclaimed? How did lack of protected time kill the project?"
-
-Framework handoff: Resources element card positions ongoing negotiation and defence, not one-time allocation.
-
 ## Further Reading
 
 **Key Frameworks:**
 - Value Articulation ("Competing Against Luck", Christensen)
-- Resource Efficiency ("The Lean Startup", Ries)
+- [Resource Efficiency ("The Lean Startup", Ries)](http://theleanstartup.com/) - The core "Build-Measure-Learn" framework for validating assumptions under uncertainty
 - Innovation Accounting Frameworks (Stage-appropriate measurement)
 - Portfolio Management Strategies
 
@@ -77,6 +67,4 @@ Framework handoff: Resources element card positions ongoing negotiation and defe
 
 _Element: Resources_  
 _Time, budget, people, materials secured and defended against operational priorities_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_
 

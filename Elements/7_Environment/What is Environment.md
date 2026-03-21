@@ -26,20 +26,12 @@ Environment design is how organisations create conditions where innovation minds
 
 **Resources as Environmental Prerequisite:** Innovation requires investment - not always large, but always deliberate. Time (most commonly underestimated), budget (prototyping materials, tools, external expertise, research), access (to users, stakeholders, data, expertise), people (right team composition with sufficient availability, not innovation as afterthought added to full-time operational roles). Resource allocation signals priority. Claiming to value innovation without allocating dedicated resources is cargo culting.
 
-## In This Workshop
-
-**Session 1:**  
-Workshop environment deliberately designed to embody principles: upbeat music (energy management), tight timing (productive pressure), standing/active posture (different from operational mode), prototyping materials visible (signal of making mode), Mural space (visual collaboration norm).
-
-Measurement Game surfaces operational pressure as environmental constraint. Reflection makes environment visible: "What conditions enabled the work? What would have prevented it?"
-
 ## Further Reading
 
 **Environment Design:**
-- "Make Space" (Doorley & Witthoft)
-- Separating Innovation from Operations ("The Innovation Mode", Stickdorn)
-- Team Conditions (Google's "Project Aristotle")
-- Flow States in creative environments
+- ["Make Space" (Doorley & Witthoft)](https://dschool.stanford.edu/shop/make-space) - How space shapes creative collaboration
+- [Team Conditions (Google's "Project Aristotle")](https://rework.withgoogle.com/print/guides/5721312655835136/) - Research on team effectiveness and environment
+- [Flow: The Psychology of Optimal Experience (Mihaly Csikszentmihalyi)](https://en.wikipedia.org/wiki/Flow_(psychology)) - Creating conditions for peak creative performance
 
 **Next Element:** Collaboration (Element 8) - how individuals interact within these environments
 
@@ -47,5 +39,3 @@ Measurement Game surfaces operational pressure as environmental constraint. Refl
 
 _Element: Environment_  
 _Conditions that protect innovation behaviours from operational gravity_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_

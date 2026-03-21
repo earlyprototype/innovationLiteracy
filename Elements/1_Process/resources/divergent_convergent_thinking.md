@@ -131,17 +131,6 @@ Spending 10 minutes diverging and 50 minutes converging, or vice versa. Both pha
 **Implicit rather than explicit:**  
 Assuming everyone knows which mode is active. Result: some people diverging while others converge, producing frustration and suboptimal outcomes. Facilitation must name the mode explicitly.
 
-## In This Workshop
-
-**Session 1 Morning - Wallet Project:**  
-Participants experience the alternation without explicit labelling. Discovery interviews (divergent) → synthesis to problem statement (convergent) → ideation (divergent) → sketch selection (convergent) → prototyping variations (divergent) → testing focus (convergent).
-
-**Session 1 Afternoon - Deep Reflection:**  
-Framework handoff makes the pattern explicit: "Remember when we said 'don't evaluate yet' during ideation? That was protecting divergent thinking. Remember when we used the 2x2 to select which sketch to prototype? That was convergent thinking. Innovation requires both, at the right times."
-
-**Measurement Game (Session 1 Afternoon):**  
-Surfaces the failure mode of applying convergent operational metrics (ROI, efficiency) to divergent innovation phases (discovery, ideation). Wrong mode for wrong stage kills innovation.
-
 ## Further Reading
 
 - **British Design Council's Double Diamond model**: https://www.designcouncil.org.uk/our-resources/the-double-diamond/ - Official documentation of the divergent/convergent framework

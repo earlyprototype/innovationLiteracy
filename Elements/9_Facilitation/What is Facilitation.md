@@ -43,25 +43,13 @@ The facilitation gap - the assumption that groups can self-facilitate - is one o
 - Prototype/Test: focus on structure, feedback capture, maintaining objectivity
 - Evaluation/Decision: focus on rigour, ensuring all perspectives considered, managing convergence
 
-## In This Workshop
-
-Facilitation is both experienced and made visible:
-
-**Session 1 Morning:**  
-Participants experience facilitation through tight timing, structured transitions, music management, clear instructions. Most happens without explicit commentary - they're immersed in the process.
-
-**Session 1 Afternoon:**  
-Meta-awareness introduced during reflection: "Notice what enabled the Wallet Project to work - the timing, the instructions that interrupted solution-jumping, the structured reflection. That's facilitation as enabling capability."
-
-Framework handoff: Facilitation element card positions it as developable capability, not personality trait.
-
 ## Further Reading
 
 **Key Frameworks:**
-- "The Skilled Facilitator" (Schwarz)
-- "Facilitator's Guide to Participatory Decision-Making" (Kaner)
-- Liberating Structures method library
-- IDEO & d.school facilitation guides
+- [The Skilled Facilitator (Schwarz)](https://www.wiley.com/en-us/The+Skilled+Facilitator%3A+A+Comprehensive+Resource+for+Consultants%2C+Facilitators%2C+Coaches%2C+and+Trainers%2C+3rd+Edition-p-9781119064404) - A comprehensive resource for guiding groups
+- [Facilitator's Guide to Participatory Decision-Making (Kaner)](https://www.wiley.com/en-us/Facilitator's+Guide+to+Participatory+Decision-Making%2C+3rd+Edition-p-9781118404959) - Methods for holding the "groan zone" and building consensus
+- [Liberating Structures](https://www.liberatingstructures.com/) - A library of 33 microstructures to facilitate engagement and equalise voices
+- [IDEO Facilitation Guides & Methods](https://www.designkit.org/) - Practical tools for running human-centred sessions
 
 **Next Element:** Governance (Element 10) - how innovation interfaces with the broader organisation
 
@@ -69,5 +57,3 @@ Framework handoff: Facilitation element card positions it as developable capabil
 
 _Element: Facilitation_  
 _Enabling and guiding the process, managing conflict, capturing learning_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_

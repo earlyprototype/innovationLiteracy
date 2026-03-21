@@ -34,23 +34,13 @@ Also produces friction - people who think differently will disagree, misundersta
 
 **Constructive Conflict:** Disagreement that advances thinking rather than entrenching positions. Managed through behaviours (constructive challenge, active listening) and facilitation (holding space for disagreement, preventing premature convergence).
 
-## In This Workshop
-
-**Session 1 Morning:**  
-Wallet Project conducted in pairs. Collaboration tested under tight timing: empathy interview dynamics, negotiating problem framing, iterating together after feedback.
-
-**Session 1 Afternoon:**  
-Brief reflection on paired work: "How did collaboration function? What enabled good teamwork? What created friction?"
-
-Framework handoff: Collaboration element card positions teamwork dynamics as developable capability.
-
 ## Further Reading
 
 **Key Frameworks:**
-- Psychological Safety ("The Fearless Organization", Edmondson)
-- Team Effectiveness (Google's Project Aristotle)
-- Collective Intelligence ("The Wisdom of Crowds", Surowiecki)
-- Team Dysfunctions ("The Five Dysfunctions of a Team", Lencioni)
+- [Psychological Safety ("The Fearless Organization", Edmondson)](https://fearlessorganization.com/) - Essential reading on team risk-taking
+- [Team Effectiveness (Google's Project Aristotle)](https://rework.withgoogle.com/print/guides/5721312655835136/) - How Google built effective teams
+- [Collective Intelligence ("The Wisdom of Crowds", Surowiecki)](https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds) - Why diverse teams outperform individuals
+- [Team Dysfunctions ("The Five Dysfunctions of a Team", Lencioni)](https://www.tablegroup.com/topics-and-resources/teamwork-5-dysfunctions/) - Addressing core team conflicts
 
 **Next Element:** Facilitation (Element 9) - how to guide and unlock collaboration
 
@@ -58,5 +48,3 @@ Framework handoff: Collaboration element card positions teamwork dynamics as dev
 
 _Element: Collaboration_  
 _Effective teamwork and creative collaboration dynamics_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_

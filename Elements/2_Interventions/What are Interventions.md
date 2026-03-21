@@ -32,35 +32,21 @@ Interventions span the full Design Thinking process:
 
 Full taxonomy available in `INTERVENTIONS_TAXONOMY.md` including technology adoption specific interventions at each stage.
 
-## In This Workshop
-
-**Session 1 Morning:**  
-IDEO Wallet Project embeds multiple interventions: false-start (interrupt assumption-driven design), "dig deeper" instruction, timed prototyping, "don't defend your prototype". Participants experience interventions in action without explicit naming.
-
-**Session 1 Afternoon:**  
-Intervention Speed-Dating: 5 stations with tactical methods, hands-on application to Wallet Project. Framework handoff naming what they experienced in morning.
-
-**Post-workshop:**  
-Full interventions taxonomy provided as reference (see `resources/INTERVENTIONS_TAXONOMY.md`). Mural board includes intervention library for self-directed exploration.
-
 ## Further Reading
 
 **Toolset Resources:**
-- PipDecks (pipdecks.com) - Physical/digital card decks with structured methods
-- IDEO Design Kit (designkit.org) - 50+ methods across all stages
-- Gamestorming (Gray, Brown, Macanufo) - Comprehensive methods library
-- d.school Method Cards (dschool.stanford.edu/resources)
-- Strategyzer Tools (strategyzer.com) - Business model and value proposition design
+- [PipDecks](https://www.pipdecks.com/) - Physical/digital card decks with structured methods
+- [IDEO Design Kit](https://www.designkit.org/) - 50+ methods across all stages
+- [Gamestorming (Gray, Brown, Macanufo)](https://gamestorming.com/) - Comprehensive methods library
+- [d.school Method Cards](https://dschool.stanford.edu/resources) - Activities for empathy and definition
+- [Strategyzer Tools](https://www.strategyzer.com/) - Business model and value proposition design
+- [Sprint (Jake Knapp, Google Ventures)](https://www.thesprintbook.com/) - A 5-day process for solving big problems and testing new ideas
 
-**Technology Adoption Frameworks:**
-- Rogers' Diffusion of Innovations
-- Technology Acceptance Model
-- Kotter's Change Management
-- Lean Change Management
+**Responsible Innovation & Ethics:**
+- [IDEO's Little Book of Design Research Ethics](https://ideo.com/post/little-book-of-design-research-ethics) - Guidelines for engaging with users responsibly
+- [The Tarot Cards of Tech (Artefact)](https://tarotcardsoftech.artefactgroup.com/) - Prompts to help teams foresee the unintended consequences of their innovations
 
 ---
 
 _Element: Interventions_  
 _Stage-dependent methods that advance the process_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_

@@ -275,23 +275,6 @@ Business model and value proposition design. Useful for Define and Test stages w
 
 ---
 
-## In This Workshop
-
-**Session 1 Morning:**
-- IDEO Wallet Project embeds multiple interventions (false-start, "dig deeper", timed prototyping, "don't defend")
-- Participants experience interventions in action without explicit naming
-
-**Session 1 Afternoon:**
-- Intervention Speed-Dating stations (5 methods, hands-on application)
-- Framework handoff naming what they experienced in morning
-
-**Post-workshop:**
-- This taxonomy provided as reference
-- Mural board includes intervention library for self-directed exploration
-- Slide deck includes links to external resources (PipDecks, IDEO Design Kit, d.school)
-
----
-
 ## Design Notes
 
 Interventions are consistently undervalued in innovation training. Teams receive process maps (Design Thinking phases) and tools (Miro, prototyping materials) but no instruction in HOW to move through the process effectively.

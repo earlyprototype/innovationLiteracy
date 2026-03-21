@@ -26,6 +26,8 @@ Involves: full attention, clarifying questions, paraphrasing to confirm understa
 
 **Constructive Challenge:** Questioning ideas, assumptions, and proposals in ways that strengthen rather than undermine them. Distinct from criticism (which evaluates) or disagreement (which opposes). Asks "have we considered...?", "what if...?", "what evidence supports...?". Requires both courage (raising uncomfortable questions) and skill (framing challenges as contributions not attacks).
 
+**Inclusive Discovery & Design:** Actively seeking out and listening to marginalised or edge-case users during the Empathise phase, and intentionally including varied cognitive styles during discovery and ideation. True cognitive diversity requires acknowledging that the "average user" often excludes crucial perspectives, and that building for extreme needs often solves problems for the majority. True diversity of thought requires an environment built for all users, not just the majority.
+
 **Disciplined Experimentation:** Testing ideas through structured, bounded experiments rather than debating them in abstract. "Let's test it" rather than "let's discuss it further". Includes defining what's being tested, how success and failure will be recognised, and what will be done with results.
 
 **Reflective Practice:** Pausing, reviewing, and extracting learning from experience - not just at project milestones but as regular rhythm. Converts experience into capability. Often first behaviour dropped under time pressure, precisely when most needed.
@@ -34,23 +36,13 @@ Involves: full attention, clarifying questions, paraphrasing to confirm understa
 
 **Building on Others' Ideas:** Using others' contributions as starting points rather than always generating from scratch. Expressed through language: "Yes, and..." rather than "No, but...". The behavioural mechanism through which cognitive diversity produces value. Requires active listening as prerequisite.
 
-## In This Workshop
-
-**Session 1 Morning:**  
-Wallet Project creates opportunities to observe behaviours under pressure. Tight timing tests active listening (empathy interviews), sharing work in progress (sketch feedback), building on ideas (iteration after feedback).
-
-**Session 1 Afternoon:**  
-Failure analysis identifies missing behaviours in participants' real-world examples. "Where did active listening break down? When did defensive posture block feedback?"
-
-Framework handoff: Behaviours element card delivered after participants have experienced behaviours being tested.
-
 ## Further Reading
 
 **Key Frameworks:**
-- Team Dysfunctions ("The Five Dysfunctions of a Team", Lencioni)
-- Learning Behaviours (Amy Edmondson)
-- Constructive Challenge ("Crucial Conversations", Patterson et al)
-- IDEO Team Norms Guides
+- [The Five Dysfunctions of a Team (Patrick Lencioni)](https://www.tablegroup.com/topics-and-resources/teamwork-5-dysfunctions/) - The foundational model on trust and conflict
+- [The Fearless Organization (Amy Edmondson)](https://fearlessorganization.com/) - Research on psychological safety and learning behaviours
+- [Crucial Conversations (Patterson et al.)](https://cruciallearning.com/crucial-conversations-book/) - Frameworks for constructive challenge and dialogue
+- [IDEO U - Improving Team Collaboration](https://www.ideou.com/blogs/inspiration/how-to-improve-team-collaboration-creativity) - Establishing team agreements and norms
 
 **Next Element:** Environment (Element 7) - the spaces and boundaries where behaviours occur
 
@@ -58,5 +50,3 @@ Framework handoff: Behaviours element card delivered after participants have exp
 
 _Element: Behaviours_  
 _Observable actions that support innovation work_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_

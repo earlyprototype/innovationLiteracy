@@ -28,23 +28,14 @@ Cultivating innovation mindsets is therefore not solely an individual developmen
 
 **Bias Towards Action:** Preference for learning through doing rather than exhaustive analysis. Recognises that in uncertain environments, action generates information that analysis alone cannot. Must be paired with disciplined reflection to avoid activity without learning.
 
-## In This Workshop
-
-**Session 1 Morning:**  
-Opening provocation ("Draw Your Ideal Innovation Process") challenges assumptions about innovation knowledge. Wallet Project creates tolerance for uncertainty through tight timing and ambiguous instructions.
-
-**Session 1 Afternoon:**  
-Deep reflection on Wallet Project surfaces mindsets under pressure: "When did you feel curious vs defensive? When did you defer judgement? When did operational thinking try to take over?"
-
-Framework handoff: Mindset element card delivered after participants have experienced mindsets being tested.
-
 ## Further Reading
 
 **Key Concepts:**
-- Growth Mindset (Carol Dweck)
-- Psychological Safety (Amy Edmondson)
-- Cognitive Biases ("Thinking, Fast and Slow", Kahneman)
-- Embracing Ambiguity (d.school)
+- [Creative Confidence (Tom & David Kelley)](https://www.creativeconfidence.com/) - Unlocking the creative potential within corporate teams
+- [Growth Mindset (Carol Dweck)](https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means) - Harvard Business Review summary
+- [Psychological Safety (Amy Edmondson)](https://fearlessorganization.com/) - The Fearless Organization
+- [Thinking, Fast and Slow (Daniel Kahneman)](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) - Cognitive biases and dual-process thinking
+- [Navigating Ambiguity (d.school)](https://dschool.stanford.edu/book-collections/navigating-ambiguity)
 
 **Next Element:** Behaviours (Element 6) - how mindsets manifest in action
 
@@ -52,5 +43,3 @@ Framework handoff: Mindset element card delivered after participants have experi
 
 _Element: Mindset_  
 _Cognitive orientations that enable innovation behaviours_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_

@@ -49,17 +49,10 @@ Charter is living document reviewed regularly (quarterly or biannually) as innov
 
 **Middle Management Engagement:** Understanding gap often most acute at middle management level. Senior leadership may endorse strategically, front-line teams may be enthusiastic, but middle managers reconcile innovation time with operational delivery targets. Without explicit engagement, innovation permission granted from above is filtered out before reaching teams. Middle managers who understand innovation become its most effective protectors.
 
-## In This Workshop
-
-**Session 1 Afternoon:**  
-Governance touched through Measurement Game - operational pressure and wrong metrics as governance failure. Failure analysis surfaces missing permission structures in real-world examples: "Why did the organisation demand ROI in the discovery phase? What governance would have protected exploratory work?"
-
-Framework handoff: Governance element card positions it as bidirectional communication infrastructure, not just top-down permission.
-
 ## Further Reading
 
 **Key Frameworks:**
-- "The Innovator's Dilemma" (Christensen) - structural barriers
+- [The Innovator's Dilemma (Clayton Christensen)](https://hbr.org/1995/01/disruptive-technologies-catching-the-wave) - Explains why operational gravity crushes disruptive innovation
 - "The Other Side of Innovation" (Govindarajan & Trimble) - managing the partnership
 - Corporate innovation charter templates
 - Research on innovation governance structures
@@ -70,6 +63,4 @@ Framework handoff: Governance element card positions it as bidirectional communi
 
 _Element: Governance_  
 _Bidirectional communication infrastructure mediating shared organisational purpose_  
-_Colour Code: [To be assigned]_  
-_Icon: [To be assigned]_
 
