@@ -198,6 +198,94 @@
             font-family: var(--font-display);
         }
 
+        .music-cue {
+            background: var(--accent-color);
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--sidebar-bg);
+            margin: 1rem 0;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .facilitator-behavior {
+            background: #f0f0f0;
+            padding: 1rem 1.5rem;
+            border-left: 6px solid var(--sidebar-bg);
+            margin: 1rem 0;
+            font-family: var(--font-display);
+        }
+
+        .facilitator-behavior h4 {
+            margin-top: 0;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .critical-moment {
+            background: #FF6B6B;
+            color: white;
+            padding: 1.5rem;
+            border: 4px solid var(--sidebar-bg);
+            margin: 1.5rem 0;
+            box-shadow: 4px 4px 0px var(--sidebar-bg);
+        }
+
+        .critical-moment h4 {
+            margin-top: 0;
+            color: white;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        .critical-moment p {
+            margin: 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .intervention-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border: 3px solid var(--sidebar-bg);
+            margin: 1rem 0;
+        }
+
+        .intervention-box h4 {
+            margin-top: 0;
+            color: white;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .intervention-box p {
+            margin: 0.5rem 0;
+            color: white;
+        }
+
+        .learn-without-teaching {
+            background: white;
+            padding: 1.5rem;
+            border: 2px dashed var(--sidebar-bg);
+            margin: 1rem 0;
+        }
+
+        .learn-without-teaching h4 {
+            margin-top: 0;
+            color: var(--sidebar-bg);
+            font-style: italic;
+        }
+
+        .timing-note {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid #FF6B6B;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            font-family: var(--font-display);
+            font-weight: 600;
+        }
+
         ul {
             margin-left: 1.5rem;
             margin-top: 0.5rem;
@@ -258,15 +346,40 @@
         <!-- OVERVIEW -->
         <section id="overview" class="content-section active">
             <h2>0. Overview</h2>
+
+            <div class="watch-for">
+                <h4>Afternoon Architecture</h4>
+                <p><strong>Morning = DO.</strong> Afternoon = REFLECT, ANALYSE, DIAGNOSE.</p>
+                <p>This session makes the implicit explicit. You're handing them the map for territory they just travelled. The goal is <strong>transferable learning</strong> - they should be able to apply this diagnostic lens to their own work.</p>
+            </div>
             
             <div class="watch-for">
                 <h4>Facilitator Stance - Afternoon</h4>
-                <p>Shift from high-energy immersion to focused analytical work. Reflective but not slow - maintain momentum through activities. Continue to name what you observe, connect morning experience to frameworks.</p>
+                <ul style="margin-left: 1rem;">
+                    <li><strong>Shift energy:</strong> From immersive doing to analytical thinking</li>
+                    <li><strong>Still engaging:</strong> Reflective doesn't mean slow - maintain momentum</li>
+                    <li><strong>Name patterns:</strong> Point back to specific morning moments</li>
+                    <li><strong>Connect dots:</strong> Link experience to conceptual frameworks</li>
+                    <li><strong>Trust the learning:</strong> They've done the work - you're just labelling what happened</li>
+                </ul>
+            </div>
+
+            <div class="music-cue">
+                MUSIC: OFF for most of afternoon (only ON during individual work phases)
             </div>
 
             <div class="cue-box">
-                <p><strong>Music:</strong> OFF for most of afternoon (only on during individual work phases)</p>
                 <p><strong>On screen:</strong> Start with Mural board, switch to slides for framework presentations</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>Session Flow</h4>
+                <p><strong>1. Deep Reflection (30 mins):</strong> Map experience to framework, name 11 elements</p>
+                <p><strong>2. Failure Analysis (30 mins):</strong> Apply diagnostic lens to real-world failures</p>
+                <p><strong>3. Intervention Speed-Dating (30 mins):</strong> Hands-on with 5 tactical methods</p>
+                <p><strong>4. Measurement Game (20 mins):</strong> Expose stage-inappropriate metrics</p>
+                <p><strong>5. Problem Space Map (10 mins):</strong> Demo systems thinking tool</p>
+                <p><strong>6. Homework Brief (10 mins):</strong> Set up week gap work</p>
             </div>
         </section>
 
@@ -279,8 +392,17 @@
                 <p>"This morning you executed a complete innovation cycle. Now we're going to map what you did onto the Design Thinking framework. This is the handoff - I'm giving you the map for the territory you just travelled."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF
+            </div>
+
             <div class="cue-box">
                 <p><strong>On screen:</strong> Slide showing Design Thinking phases (Empathise, Define, Ideate, Prototype, Test) as loop diagram</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>Facilitation Stance</h4>
+                <p>Connect lived experience to conceptual framework. Point backwards to specific moments. Make the implicit explicit without lecturing.</p>
             </div>
 
             <hr class="phase-divider">
@@ -348,11 +470,27 @@
                 <h4>Closing</h4>
                 <p>"This is your reference. When you're back at work and someone says 'we need to innovate,' you'll have a foundational understanding of what process looks like."</p>
             </div>
+
+            <div class="learn-without-teaching">
+                <h4>What They've Gained (Without Explicit Teaching)</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>A mental model mapping morning's chaos to structured process</li>
+                    <li>Vocabulary to describe what they experienced (11 elements)</li>
+                    <li>Understanding that innovation is systemic, not just creative</li>
+                    <li>Recognition that interventions are deliberate, not accidental</li>
+                    <li>Baseline literacy - can now recognise innovation landscape</li>
+                </ul>
+            </div>
         </section>
 
         <!-- FAILURE ANALYSIS -->
         <section id="failure" class="content-section">
             <h2>2. Failure Analysis</h2>
+
+            <div class="watch-for">
+                <h4>Purpose of This Exercise</h4>
+                <p>Transfer learning from trivial challenge (wallet) to their real work. This is where foundations become practical. Watch for aha moments: "Oh, that's why our project failed - we skipped empathy."</p>
+            </div>
 
             <div class="script-box">
                 <h4>Setup (00:30-00:32)</h4>
@@ -364,17 +502,35 @@
                 </ol>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF - focused analytical conversation
+            </div>
+
             <div class="cue-box">
                 <p><strong>On screen:</strong> Mural failure analysis workspace (columns for each Design Thinking phase)</p>
-                <p><strong>Breakout rooms:</strong> Small groups, 20 minutes</p>
+                <p><strong>Breakout rooms:</strong> Small groups (3-4 people), 20 minutes</p>
+            </div>
+
+            <div class="timing-note">
+                TIMING: This runs 00:32-00:50 (18 mins in breakouts, return at 00:50)
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>During Breakouts (00:32-00:50)</h4>
+                <p><strong>Pop into rooms strategically:</strong> Spend 2-3 minutes per room. Listen first, intervene second.</p>
+                <p><strong>If they're stuck:</strong> "Where would you place this failure on the Design Thinking map? What phase broke?"</p>
+                <p><strong>If they're surface-level:</strong> "What element was missing? Not just process - was it skills? Governance? Resources?"</p>
+                <p><strong>Note patterns:</strong> Are multiple groups identifying the same failure modes? That's your debrief material.</p>
             </div>
 
             <div class="watch-for">
-                <h4>During Breakouts (00:32-00:50)</h4>
+                <h4>Common Patterns to Listen For</h4>
                 <ul style="margin-left: 1rem;">
-                    <li>Pop into rooms, listen</li>
-                    <li>Ask probing questions if groups are stuck</li>
-                    <li>Note common failure patterns for debrief</li>
+                    <li><strong>Solution jumping:</strong> "We never talked to users, just built what we thought they wanted"</li>
+                    <li><strong>Weak problem framing:</strong> "We didn't really define the problem properly"</li>
+                    <li><strong>Process cargo-culting:</strong> "We said we were doing Design Thinking but skipped empathy"</li>
+                    <li><strong>Wrong metrics:</strong> "Leadership wanted ROI projections during discovery phase"</li>
+                    <li><strong>Missing defence:</strong> "We had the skills but couldn't protect the time/space to use them"</li>
                 </ul>
             </div>
 
@@ -419,11 +575,21 @@
                 <p><strong>On screen:</strong> Slide "Why Innovation Fails" (diagnostic framework)</p>
                 <p><strong>Action:</strong> Post in Mural + chat</p>
             </div>
+
+            <div class="learn-without-teaching">
+                <h4>Diagnostic Capability Developing</h4>
+                <p>They can now look at failed innovation and see <strong>where</strong> and <strong>why</strong> it broke. This is foundational diagnostic literacy - recognising patterns of failure across their organisation.</p>
+            </div>
         </section>
 
         <!-- INTERVENTIONS -->
         <section id="interventions" class="content-section">
             <h2>3. Intervention Speed-Dating</h2>
+
+            <div class="watch-for">
+                <h4>Purpose: Tactical Exposure</h4>
+                <p>This is NOT mastery training - it's exposure and awareness building. They're building a mental catalogue: "When I need to [X], this method exists." Speed is deliberate - prevents perfectionism, maintains energy.</p>
+            </div>
 
             <div class="script-box">
                 <h4>Setup (01:00-01:02)</h4>
@@ -433,45 +599,55 @@
             <div class="cue-box">
                 <p><strong>On screen:</strong> Mural board with 5 intervention stations pre-configured</p>
                 <p><strong>Format:</strong> Self-guided rotation through Mural stations</p>
-                <p><strong>Music:</strong> ON (low) during work phases</p>
+            </div>
+
+            <div class="timing-note">
+                TIMING: 5 mins per station = 25 mins total (01:02-01:27). Debrief 01:27-01:30.
             </div>
 
             <hr class="phase-divider">
 
             <h3>The Five Stations</h3>
 
-            <div class="prompts-list">
+            <div class="intervention-box">
                 <h4>Station 1: How Might We Statements (5 mins)</h4>
-                <p>Linguistic reframing for problem definition</p>
+                <p><strong>What it does:</strong> Linguistic reframing for problem definition</p>
+                <p><strong>Instruction:</strong> Take the wallet problem and reframe it 5 different ways using "How might we...?"</p>
             </div>
 
-            <div class="prompts-list">
+            <div class="intervention-box">
                 <h4>Station 2: 2x2 Prioritisation Matrix (5 mins)</h4>
-                <p>Decision-making framework (Impact vs Effort)</p>
+                <p><strong>What it does:</strong> Decision-making framework (Impact vs Effort)</p>
+                <p><strong>Instruction:</strong> Plot your wallet ideas on the matrix - which are high impact/low effort?</p>
             </div>
 
-            <div class="prompts-list">
+            <div class="intervention-box">
                 <h4>Station 3: Assumption Mapping (5 mins)</h4>
-                <p>Identify and test assumptions</p>
+                <p><strong>What it does:</strong> Identify and test assumptions</p>
+                <p><strong>Instruction:</strong> List 5 assumptions you made about your partner's wallet needs - which need testing?</p>
             </div>
 
-            <div class="prompts-list">
+            <div class="intervention-box">
                 <h4>Station 4: Stakeholder Mapping (5 mins)</h4>
-                <p>See the system around the problem</p>
+                <p><strong>What it does:</strong> See the system around the problem</p>
+                <p><strong>Instruction:</strong> Who else is affected by wallet design decisions? Map the stakeholder ecosystem.</p>
             </div>
 
-            <div class="prompts-list">
-                <h4>Station 5: SWOT Analysis (5 mins)</h4>
-                <p>Analyse strengths, weaknesses, opportunities, threats</p>
+            <div class="intervention-box">
+                <h4>Station 5: 5 Whys (5 mins)</h4>
+                <p><strong>What it does:</strong> Root cause analysis through iterative questioning</p>
+                <p><strong>Instruction:</strong> Take one wallet frustration your partner mentioned. Ask "why?" five times to find the root cause.</p>
+                <p><strong>Example:</strong> "My wallet is bulky" → Why? → "I carry too many cards" → Why? → "I don't trust digital payments" → Why? → etc.</p>
             </div>
 
-            <div class="watch-for">
+            <div class="facilitator-behavior">
                 <h4>During Stations (01:02-01:25)</h4>
-                <ul style="margin-left: 1rem;">
-                    <li>Monitor progress</li>
-                    <li>Answer questions as they arise</li>
-                    <li>Note which methods resonate, which feel forced</li>
-                </ul>
+                <p><strong>Your role:</strong> Light touch facilitation. Answer questions as they arise, but don't over-explain. Watch for which methods click naturally and which feel awkward - this is useful data.</p>
+                <p><strong>Note:</strong> Some participants will want to perfect each method. Remind them: "Focus on understanding what it does, not perfecting it. You have 5 minutes."</p>
+            </div>
+
+            <div class="music-cue">
+                MUSIC: ON (low) during work phases
             </div>
 
             <hr class="phase-divider">
@@ -488,18 +664,33 @@
             </div>
 
             <div class="cue-box">
-                <p><strong>Expected responses:</strong> "HMW felt useful for problem framing" / "2x2 matrix helped prioritise" / "SWOT felt corporate" (useful observation)</p>
+                <p><strong>Expected responses:</strong> "HMW felt useful for problem framing" / "2x2 matrix helped prioritise" / "5 Whys helped find the real problem" / "Assumption mapping was eye-opening"</p>
             </div>
 
             <div class="script-box">
                 <h4>Framing Close (01:29-01:30)</h4>
                 <p>"These are interventions - structured methods that help you advance the process. Some will fit your context, some won't. The point is knowing they exist and beginning to recognise when to deploy them. This is foundations work - you're building awareness of what's available, not mastery of each method."</p>
             </div>
+
+            <div class="learn-without-teaching">
+                <h4>Building the Toolkit</h4>
+                <p>They now have 5 tactical methods in their awareness. Not mastery - <strong>awareness</strong>. They know these exist and roughly what they do. That's sufficient for foundations work. Mastery comes through practice.</p>
+            </div>
         </section>
 
         <!-- MEASUREMENT -->
         <section id="measurement" class="content-section">
             <h2>4. Measurement Game</h2>
+
+            <div class="critical-moment">
+                <h4>This is a Trap - By Design</h4>
+                <p>The metrics are deliberately mismatched to the project phases. Participants should feel discomfort. That discomfort is the learning. <strong>Do not rescue them.</strong> Let them struggle for the full 10 minutes.</p>
+            </div>
+
+            <div class="watch-for">
+                <h4>Why This Exercise Matters</h4>
+                <p>Innovation gets killed by wrong metrics more often than bad ideas. Operational measures applied to exploratory work crush innovation before it starts. This exercise makes that visible and visceral.</p>
+            </div>
 
             <div class="script-box">
                 <h4>Setup (01:30-01:32)</h4>
@@ -520,18 +711,26 @@
                 <p>You have 10 minutes. Decide how to allocate funding. Use the metrics provided."</p>
             </div>
 
+            <div class="timing-note">
+                TIMING: Work 01:32-01:42 (10 mins). Debrief 01:42-01:48 (6 mins). Reveal 01:48-01:50 (2 mins).
+            </div>
+
             <div class="cue-box">
                 <p><strong>On screen:</strong> Mural workspace with projects listed, metrics provided, budget allocation sliders</p>
-                <p><strong>Music:</strong> ON (low) during work</p>
             </div>
 
-            <div class="watch-for">
-                <h4>During Work (01:32-01:42)</h4>
-                <p>Let them struggle with the mismatched metrics. Don't hint at the trap.</p>
+            <div class="music-cue">
+                MUSIC: ON (low) during work
             </div>
 
-            <div class="cue-box">
-                <p><strong>Music:</strong> OFF at 01:42</p>
+            <div class="critical-moment">
+                <h4>The Trap</h4>
+                <p><strong>Let them struggle with the mismatched metrics. Don't hint. Don't rescue.</strong></p>
+                <p>This discomfort is pedagogical. They need to feel the mismatch before the reveal lands. Watch for frustration - "These metrics don't make sense" - that's the signal it's working.</p>
+            </div>
+
+            <div class="music-cue">
+                MUSIC: OFF at 01:42
             </div>
 
             <hr class="phase-divider">
@@ -572,6 +771,11 @@
                 <p><strong>On screen:</strong> Slide "Stage-Appropriate Measurement Principles"</p>
                 <p><strong>Action:</strong> Post in Mural + chat</p>
             </div>
+
+            <div class="learn-without-teaching">
+                <h4>Critical Insight Gained</h4>
+                <p>Innovation requires <strong>stage-appropriate metrics</strong>. Operational measures (ROI, time to market) during exploratory phases crush the work. They've now felt this tension viscerally - the learning will stick.</p>
+            </div>
         </section>
 
         <!-- PROBLEM SPACE MAP -->
@@ -583,8 +787,17 @@
                 <p>"Last thing before homework: I'm going to show you a tool called the Problem Space Map. It helps you see how your problem connects to larger patterns. You're not doing the full exercise now - I'm just demonstrating how it works."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF
+            </div>
+
             <div class="cue-box">
                 <p><strong>On screen:</strong> Problem Space Map template (screen share or Mural)</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>Demo Only - No Full Exercise</h4>
+                <p>Walk through quickly. Show 1-2 layers. The goal is to scaffold their homework, not teach the full method now. They'll learn by doing it themselves.</p>
             </div>
 
             <hr class="phase-divider">
@@ -605,6 +818,15 @@
             <div class="cue-box">
                 <p><strong>On screen:</strong> Show Problem Space Map layers visible (Data, Technology, Product, Experience, System, Implications)</p>
                 <p><strong>Note:</strong> No full exercise - just demo to scaffold homework</p>
+            </div>
+
+            <div class="timing-note">
+                TIMING: Keep this tight - 8 minutes max. It's a demo, not a workshop.
+            </div>
+
+            <div class="watch-for">
+                <h4>Scaffolding, Not Teaching</h4>
+                <p>You're showing them enough to do their homework. Don't over-explain. The learning happens when they do it themselves during the week gap.</p>
             </div>
         </section>
 
@@ -664,6 +886,19 @@
                     <li>Note patterns for Week 2 adjustments</li>
                     <li>Check homework submissions during week gap</li>
                     <li>Send reminder 2 days before Week 2 (homework due)</li>
+                </ul>
+            </div>
+
+            <div class="learn-without-teaching">
+                <h4>What They're Taking Away from Week 1</h4>
+                <ul style="margin-left: 1rem;">
+                    <li><strong>Experiential foundation:</strong> Complete Design Thinking cycle lived, not lectured</li>
+                    <li><strong>Diagnostic lens:</strong> Can recognise where and why innovation breaks</li>
+                    <li><strong>Vocabulary:</strong> 11 elements, interventions, stage-appropriate metrics</li>
+                    <li><strong>Tactical awareness:</strong> 5 methods exist and roughly what they do</li>
+                    <li><strong>Systems thinking:</strong> Problems connect to larger patterns (Problem Space Map)</li>
+                    <li><strong>Baseline literacy:</strong> Sufficient to recognise the landscape, know what matters</li>
+                    <li><strong>Not mastery:</strong> That comes through practice - Week 2 begins conscious practice</li>
                 </ul>
             </div>
         </section>

@@ -578,7 +578,7 @@ You now have a foundational diagnostic lens. You can start recognising where and
 2. **2x2 Prioritisation Matrix** - Decision-making framework (Impact vs Effort)
 3. **Assumption Mapping** - Identify and test assumptions
 4. **Stakeholder Mapping** - See the system around the problem
-5. **SWOT Analysis** - Analyse strengths, weaknesses, opportunities, threats
+5. **5 Whys** - Root cause analysis through iterative questioning
 
 **Format:** Self-guided rotation through Mural stations
 
@@ -609,7 +609,8 @@ You now have a foundational diagnostic lens. You can start recognising where and
 **Expected responses:**
 - "HMW felt useful for problem framing"
 - "2x2 matrix helped prioritise"
-- "SWOT felt corporate" (useful observation)
+- "5 Whys helped find the real problem"
+- "Assumption mapping was eye-opening"
 
 **Facilitator framing (01:29-01:30):**
 "These are interventions - structured methods that help you advance the process. Some will fit your context, some won't. The point is knowing they exist and beginning to recognise when to deploy them. This is foundations work - you're building awareness of what's available, not mastery of each method."

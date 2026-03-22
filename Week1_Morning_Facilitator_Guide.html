@@ -185,6 +185,187 @@
             margin-top: 0;
         }
 
+        .critical-moment {
+            background: #FF6B6B;
+            color: white;
+            padding: 1.5rem;
+            border: 4px solid var(--sidebar-bg);
+            margin: 1.5rem 0;
+            box-shadow: 4px 4px 0px var(--sidebar-bg);
+        }
+
+        .critical-moment h4 {
+            margin-top: 0;
+            color: white;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        .critical-moment p {
+            margin: 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .facilitator-behavior {
+            background: #f0f0f0;
+            padding: 1rem 1.5rem;
+            border-left: 6px solid var(--sidebar-bg);
+            margin: 1rem 0;
+            font-family: var(--font-display);
+        }
+
+        .facilitator-behavior h4 {
+            margin-top: 0;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .music-cue {
+            background: var(--accent-color);
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--sidebar-bg);
+            margin: 1rem 0;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .learn-without-teaching {
+            background: white;
+            padding: 1.5rem;
+            border: 2px dashed var(--sidebar-bg);
+            margin: 1rem 0;
+        }
+
+        .learn-without-teaching h4 {
+            margin-top: 0;
+            color: var(--sidebar-bg);
+            font-style: italic;
+        }
+
+        .provocation-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border: 3px solid var(--sidebar-bg);
+            margin: 1rem 0;
+        }
+
+        .provocation-box h4 {
+            margin-top: 0;
+            color: white;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+        }
+
+        .provocation-box ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .provocation-box li {
+            color: white;
+            margin: 0.5rem 0;
+        }
+
+        .provocation-box p {
+            margin: 0.5rem 0;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .phase-navigator {
+            position: sticky;
+            top: 1rem;
+            background: var(--sidebar-bg);
+            border: 2px solid var(--accent-color);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            max-width: 280px;
+            float: right;
+            margin-left: 2rem;
+            z-index: 50;
+        }
+
+        .phase-navigator.minimized {
+            max-width: 60px;
+            padding: 0.5rem;
+        }
+
+        .phase-navigator h4 {
+            color: var(--accent-color);
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            margin: 0 0 0.75rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phase-navigator.minimized h4 {
+            display: none;
+        }
+
+        .phase-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .phase-navigator.minimized .phase-links {
+            display: none;
+        }
+
+        .phase-links li {
+            margin: 0;
+            border-bottom: 1px solid rgba(223, 255, 0, 0.1);
+        }
+
+        .phase-links a {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            color: rgba(245, 245, 245, 0.7);
+            text-decoration: none;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .phase-links a:hover, .phase-links a.active-phase {
+            color: var(--sidebar-text);
+            background-color: rgba(223, 255, 0, 0.1);
+            border-left-color: var(--accent-color);
+        }
+
+        .phase-toggle {
+            background: var(--accent-color);
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.8rem;
+            width: 100%;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .phase-navigator.minimized .phase-toggle {
+            margin-top: 0;
+            padding: 0.75rem 0.5rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        @media (max-width: 768px) {
+            .phase-navigator {
+                float: none;
+                max-width: 100%;
+                position: relative;
+                margin-left: 0;
+            }
+        }
+
         .prompts-list {
             background: white;
             padding: 1.5rem;
@@ -256,6 +437,34 @@
         <section id="overview" class="content-section active">
             <h2>0. Overview</h2>
             
+            <div class="watch-for">
+                <h4>Why the Wallet Project?</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>Everyone has experience with a wallet or similar object</li>
+                    <li>The wallet and its contents evoke meaning and connect to larger life context</li>
+                    <li>Enables wide range of innovation outcomes (objects, experiences, services, systems, spaces)</li>
+                    <li>Physical artifact allows immediate recall of experiences</li>
+                    <li>Trivial challenge keeps cognitive load low - focus on process, not content expertise</li>
+                </ul>
+            </div>
+
+            <div class="watch-for">
+                <h4>Project-Based Learning Philosophy</h4>
+                <p><strong>DO, then REFLECT</strong> - not "tell, then do"</p>
+                <p>Provide limited scaffolding to allow participants to experience first, then facilitate reflection where they extract their own learning. The experience does the teaching.</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>Critical Facilitator Behaviors</h4>
+                <ul style="margin-left: 1rem;">
+                    <li><strong>Be assertive about timing</strong> - Find a fun way to announce "Time's up!" Use a gong, sound effect, or distinctive signal</li>
+                    <li><strong>Keep timing TIGHT</strong> - this is not negotiable. Rushed timing is pedagogical, not accidental</li>
+                    <li><strong>It's normal for people to freeze</strong> - remind them of time left to push them to start</li>
+                    <li><strong>Use music strategically</strong> - it's architectural to the experience (see music cues throughout)</li>
+                    <li><strong>Watch, don't intervene</strong> - let productive failure happen, debrief patterns afterwards</li>
+                </ul>
+            </div>
+            
             <div class="script-box">
                 <h4>Pre-Session (8:45-9:00)</h4>
                 <p><strong>Music:</strong> d.school ACTIVE playlist on low</p>
@@ -285,10 +494,18 @@
                 <p>"Right, let's start. No preamble. I'm going to give you an instruction, and I want you to follow it without questioning or discussing. You'll have 5 minutes. Silent. Individual work. Pen and paper. Here's the task: <strong>Draw your ideal innovation process.</strong> Use whatever format makes sense to you - flowchart, diagram, sketch, words. Go."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF - Silence is deliberate. Creates stark contrast with the rest of the morning.
+            </div>
+
             <div class="cue-box">
                 <p><strong>On screen:</strong> Slide - "Draw Your Ideal Innovation Process" (minimal, no hints)</p>
-                <p><strong>Music:</strong> OFF - silence is part of the exercise</p>
                 <p><strong>Timer:</strong> 5 minutes visible</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>Facilitator Behavior During Drawing</h4>
+                <p><strong>It is normal for people to freeze and delay putting anything down.</strong> This productive discomfort is intentional. Remind them of time remaining to push them to start, but don't rescue them from the discomfort.</p>
             </div>
 
             <div class="watch-for">
@@ -384,9 +601,15 @@
                 <p>"Use the Pen/Draw tool - draw a self-portrait in 30 seconds."</p>
             </div>
 
-            <div class="watch-for">
-                <h4>Purpose of Self-Portrait</h4>
-                <p>Impossible to produce something polished in 30 seconds - normalises imperfection early. Breaks any remaining tension.</p>
+            <div class="learn-without-teaching">
+                <h4>What Participants Learn (Without Being Taught)</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>How to drag elements in Mural</li>
+                    <li>How to add and type on sticky notes</li>
+                    <li>How to navigate the board</li>
+                    <li>How to use the pen/draw tool</li>
+                    <li><strong>Most importantly:</strong> Imperfection is acceptable - the 30-second self-portrait is impossible to polish, normalising rough work early</li>
+                </ul>
             </div>
 
             <hr class="phase-divider">
@@ -430,16 +653,48 @@
         <section id="wallet" class="content-section">
             <h2>3. Wallet Project</h2>
 
-            <h3>Phase 1: False Start (00:30-00:35)</h3>
+            <!-- Phase Quick Navigator -->
+            <div class="phase-navigator" id="phaseNav">
+                <h4>Quick Jump</h4>
+                <ul class="phase-links">
+                    <li><a href="#phase1" onclick="setActivePhase(event, 'phase1')">1. False Start (5min)</a></li>
+                    <li><a href="#phase2" onclick="setActivePhase(event, 'phase2')">2. Empathy R1 (10min)</a></li>
+                    <li><a href="#phase3" onclick="setActivePhase(event, 'phase3')">3. Dig Deeper (15min)</a></li>
+                    <li><a href="#phase4" onclick="setActivePhase(event, 'phase4')">4. Synthesis (10min)</a></li>
+                    <li><a href="#phase5" onclick="setActivePhase(event, 'phase5')">5. Problem Frame (10min)</a></li>
+                    <li><a href="#phase6" onclick="setActivePhase(event, 'phase6')">6. Ideation (10min)</a></li>
+                    <li><a href="#phase7" onclick="setActivePhase(event, 'phase7')">7. Sketching (10min)</a></li>
+                    <li><a href="#phase8" onclick="setActivePhase(event, 'phase8')">8. Feedback (10min)</a></li>
+                    <li><a href="#phase9" onclick="setActivePhase(event, 'phase9')">9. Prototyping (7min)</a></li>
+                    <li><a href="#phase10" onclick="setActivePhase(event, 'phase10')">10. Testing (3min)</a></li>
+                </ul>
+                <button class="phase-toggle" onclick="togglePhaseNav()">Hide</button>
+            </div>
+
+            <div class="watch-for">
+                <h4>The "False Start" Strategy</h4>
+                <p>Of course, you don't tell participants it's a false start. The intention is to contrast an abstract problem-centric approach (typical for many people) with the human-centred design thinking approach they'll experience in the rest of the project.</p>
+                <p><strong>This is deliberately problem-solving, not design thinking. They need to feel the difference.</strong></p>
+            </div>
+
+            <h3 id="phase1">Phase 1: False Start (00:30-00:35)</h3>
 
             <div class="script-box">
                 <h4>Opening Challenge (00:30)</h4>
                 <p>"Right, your challenge: redesign the wallet. You have 3 minutes. Go."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: ON (moderate volume) - Contrast with the silent opening provocation
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> ON (moderate volume)</p>
                 <p><strong>What happens:</strong> Participants jump to solutions, sketch wallet designs based on assumptions, no research</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>Facilitator Behavior</h4>
+                <p>Watch silently. Don't intervene. Note who freezes, who jumps in confidently. This is data for the debrief.</p>
             </div>
 
             <div class="script-box">
@@ -467,36 +722,41 @@
 
             <hr class="phase-divider">
 
-            <h3>Phase 2: Empathy Round 1 (00:35-00:45)</h3>
+            <h3 id="phase2">Phase 2: Empathy Round 1 (00:35-00:45)</h3>
 
             <div class="script-box">
                 <h4>Setup (00:35-00:36)</h4>
                 <p>"You're going to pair up. One of you is the interviewer, one is the user. Interviewer: your job is to understand your partner's relationship with their wallet. User: answer honestly. You have 5 minutes. Then you'll switch roles. Breakout rooms opening now."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF during interviews - enables focus and conversation
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> OFF during interviews</p>
                 <p><strong>Breakout rooms:</strong> Pairs for 5 minutes each (10 mins total)</p>
             </div>
 
-            <div class="prompts-list">
-                <h4>Interview Prompts (posted in Mural)</h4>
-                <ul style="margin-left: 0; padding-left: 1rem;">
+            <div class="provocation-box">
+                <h4>Interview Provocations (posted in Mural as starting points)</h4>
+                <p>These are conversation starters, not scripts. Encourage participants to follow interesting threads.</p>
+                <ul>
                     <li>"Tell me about your current wallet"</li>
                     <li>"When do you use it?"</li>
                     <li>"What frustrates you about it?"</li>
                     <li>"What works well?"</li>
                 </ul>
+                <p><strong>Purpose:</strong> Start the conversation. Most will stay surface-level - that's expected and necessary for the "dig deeper" intervention to land.</p>
             </div>
 
-            <div class="watch-for">
+            <div class="facilitator-behavior">
                 <h4>During Breakouts</h4>
-                <p>Pop into rooms briefly, listen. Most will stay surface-level. Don't intervene yet - let it happen.</p>
+                <p>Pop into rooms briefly, listen. Most will stay surface-level. <strong>Don't intervene yet - let it happen.</strong> Some will ask good questions, some will lead with solutions. This is data for what comes next.</p>
             </div>
 
             <hr class="phase-divider">
 
-            <h3>Phase 3: "Dig Deeper" Intervention + Round 2 (00:45-01:00)</h3>
+            <h3 id="phase3">Phase 3: "Dig Deeper" Intervention + Round 2 (00:45-01:00)</h3>
 
             <div class="script-box">
                 <h4>Return & Reflect (00:45-00:46)</h4>
@@ -507,41 +767,62 @@
                 <p><strong>Expected responses:</strong> "They keep receipts in it" / "They don't like the colour" / "It's too bulky" (surface-level facts)</p>
             </div>
 
-            <div class="script-box">
-                <h4>THE INTERVENTION (00:46-00:47)</h4>
-                <p>"Right. Those are facts. Now I want you to <strong>go deeper</strong>. Why do they keep receipts? What does their wallet say about how they live? What jobs is their wallet doing beyond holding money? You're going back in for round 2. Dig deeper this time."</p>
+            <div class="critical-moment">
+                <h4>THE CRITICAL INTERVENTION (00:46-00:47)</h4>
+                <p><strong>This is THE pivotal teaching moment of the entire morning. Deliver it with conviction.</strong></p>
+                <p>"Right. Those are facts. Now I want you to <strong>go deeper</strong>.</p>
+                <ul style="margin-left: 1.5rem;">
+                    <li>Why do they keep receipts?</li>
+                    <li>What does their wallet say about how they live?</li>
+                    <li>What jobs is their wallet doing beyond holding money?</li>
+                </ul>
+                <p>You're going back in for round 2. <strong>Dig deeper this time.</strong>"</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>What You're Teaching (Without Saying It)</h4>
+                <p>The difference between surface-level facts and deep insights. Between describing and understanding. Between problem-centric and human-centred design. <strong>This intervention is why they're here.</strong></p>
+            </div>
+
+            <div class="music-cue">
+                MUSIC: OFF - keep focus on conversation depth
             </div>
 
             <div class="cue-box">
                 <p><strong>Breakout rooms:</strong> Same pairs, 5 minutes each (10 mins total)</p>
             </div>
 
-            <div class="prompts-list">
-                <h4>New Prompts (posted in Mural)</h4>
-                <ul style="margin-left: 0; padding-left: 1rem;">
+            <div class="provocation-box">
+                <h4>Deeper Provocations (posted in Mural)</h4>
+                <p><strong>Purpose:</strong> Dig for stories, feelings, and emotion. Ask "WHY?" often. Forget about the wallet - find out what's important to your partner.</p>
+                <ul>
                     <li>"Why do you organise your wallet that way?"</li>
                     <li>"What would you lose if your wallet disappeared?"</li>
                     <li>"When does your wallet fail you?"</li>
                     <li>"What does your wallet say about you?"</li>
                 </ul>
+                <p>These questions connect the wallet to life context, identity, systems, and meaning.</p>
             </div>
 
             <div class="watch-for">
-                <h4>Listen For</h4>
-                <p>Depth shift - emotional connections, identity aspects, system implications. Aha moments: "I never thought about it that way"</p>
+                <h4>Listen For The Shift</h4>
+                <p>Depth shift - emotional connections, identity aspects, system implications. Aha moments: "I never thought about it that way." The quality of conversation should change noticeably. Note specific examples for afternoon debrief.</p>
             </div>
 
             <hr class="phase-divider">
 
-            <h3>Phase 4: Synthesis (01:00-01:10)</h3>
+            <h3 id="phase4">Phase 4: Synthesis (01:00-01:10)</h3>
 
             <div class="script-box">
                 <h4>Individual Work (01:00-01:01)</h4>
                 <p>"Right, you've got data. Now make sense of it. Individual work: capture the most interesting things you learned about your partner. Not just facts - <strong>insights</strong>. What surprised you? What patterns did you notice? What needs are hidden in what they said? You have 7 minutes. Use sticky notes in Mural."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: ON (low volume) - supportive background for individual thinking work
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> ON (low volume)</p>
                 <p><strong>On screen:</strong> Mural synthesis workspace with columns: Facts, Patterns, Insights, Needs</p>
             </div>
 
@@ -550,8 +831,8 @@
                 <p>"Last minute. Start looking for the insight that will drive your design."</p>
             </div>
 
-            <div class="cue-box">
-                <p><strong>Music:</strong> OFF at 01:08</p>
+            <div class="music-cue">
+                MUSIC: OFF at 01:08 - transition to sharing
             </div>
 
             <div class="script-box">
@@ -566,7 +847,7 @@
 
             <hr class="phase-divider">
 
-            <h3>Phase 5: Problem Framing (01:10-01:20)</h3>
+            <h3 id="phase5">Phase 5: Problem Framing (01:10-01:20)</h3>
 
             <div class="script-box">
                 <h4>HMW Framing (01:10-01:11)</h4>
@@ -575,8 +856,11 @@
                 <p>You have 7 minutes. Write multiple versions. Pick the one that feels most generative."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: ON - individual thinking work
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> ON</p>
                 <p><strong>On screen:</strong> Mural workspace for How Might We statements</p>
             </div>
 
@@ -597,15 +881,18 @@
 
             <hr class="phase-divider">
 
-            <h3>Phase 6: Ideation (01:20-01:30)</h3>
+            <h3 id="phase6">Phase 6: Ideation (01:20-01:30)</h3>
 
             <div class="script-box">
                 <h4>Generate Solutions (01:20-01:21)</h4>
                 <p>"Now generate solutions. Quantity over quality. Defer judgement - don't critique your ideas yet. Sketch, write, diagram - whatever gets ideas out fast. You have 8 minutes. Go for volume."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: ON (higher energy) - upbeat tempo for generative energy
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> ON (higher energy)</p>
                 <p><strong>On screen:</strong> Mural ideation workspace (grid layout for rapid sketching)</p>
             </div>
 
@@ -614,22 +901,28 @@
                 <p>"Last minute. Circle your top 3 ideas."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF at 01:29
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> OFF at 01:29</p>
                 <p><strong>No share yet - keep momentum</strong></p>
             </div>
 
             <hr class="phase-divider">
 
-            <h3>Phase 7: Sketching (01:30-01:40)</h3>
+            <h3 id="phase7">Phase 7: Sketching (01:30-01:40)</h3>
 
             <div class="script-box">
                 <h4>Develop Concept (01:30)</h4>
                 <p>"Pick one idea. Sketch it in enough detail that someone else can understand it. You have 8 minutes. Don't aim for perfection - aim for clarity."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: ON (moderate) - focused work mode
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> ON (moderate)</p>
                 <p><strong>On screen:</strong> Mural sketching workspace</p>
             </div>
 
@@ -640,21 +933,29 @@
 
             <hr class="phase-divider">
 
-            <h3>Phase 8: Feedback + Iteration (01:40-01:50)</h3>
+            <h3 id="phase8">Phase 8: Feedback + Iteration (01:40-01:50)</h3>
 
             <div class="script-box">
                 <h4>Setup Feedback (01:40-01:41)</h4>
                 <p>"Back to your pairs. You're going to show your sketch to your partner - the person you interviewed. Here's the rule: <strong>don't defend your design</strong>. Just show it and ask: 'What works? What doesn't? What's missing?' Listen. Take notes. You have 3 minutes each."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF - enables focused conversation
+            </div>
+
             <div class="cue-box">
-                <p><strong>Music:</strong> OFF</p>
                 <p><strong>Breakout rooms:</strong> Pairs, 3 minutes per person (6 mins total)</p>
             </div>
 
             <div class="watch-for">
-                <h4>Key Behaviour</h4>
-                <p>Participants receiving feedback without defending - this is a critical skill to model</p>
+                <h4>Key Behaviour to Watch</h4>
+                <p>Participants receiving feedback without defending - this is a critical skill to model. Note who struggles with this - it's useful data for afternoon reflection.</p>
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>During Breakouts</h4>
+                <p><strong>Pop into rooms and listen for defensiveness.</strong> If someone is explaining/defending rather than listening, gently remind: "Just listen - take notes on what they're saying." But mostly, let it play out naturally.</p>
             </div>
 
             <div class="script-box">
@@ -662,22 +963,30 @@
                 <p>"You've got feedback. Now iterate. Modify your design based on what you learned. You have 3 minutes."</p>
             </div>
 
-            <div class="cue-box">
-                <p><strong>Music:</strong> ON</p>
-                <p><strong>Music:</strong> OFF at 01:49</p>
+            <div class="music-cue">
+                MUSIC: ON for quick iteration work
+            </div>
+
+            <div class="music-cue">
+                MUSIC: OFF at 01:49
             </div>
 
             <hr class="phase-divider">
 
-            <h3>Phase 9: Prototyping (01:50-01:57)</h3>
+            <h3 id="phase9">Phase 9: Prototyping (01:50-01:57)</h3>
 
             <div class="script-box">
                 <h4>Build It (01:50)</h4>
                 <p>"Now build it. Use whatever materials you have at hand - paper, pens, scissors, tape, household items. You have 7 minutes. Make something your partner can hold and react to. Go."</p>
             </div>
 
-            <div class="cue-box">
-                <p><strong>Music:</strong> ON (high energy)</p>
+            <div class="music-cue">
+                MUSIC: ON (high energy) - maximum energy for making mode
+            </div>
+
+            <div class="facilitator-behavior">
+                <h4>Keep Energy High</h4>
+                <p>This is the most tactile, kinetic phase. Your energy should match the music. Watch for creative problem-solving and interesting material choices. <strong>Call out good making behavior as it happens</strong> - "I love how you're using that!" - to maintain momentum.</p>
             </div>
 
             <div class="watch-for">
@@ -685,7 +994,7 @@
                 <ul style="margin-left: 1rem;">
                     <li>Watch for creative problem-solving</li>
                     <li>Note interesting material choices</li>
-                    <li>Keep energy high</li>
+                    <li>Note who gets stuck in perfectionism vs who embraces rough</li>
                 </ul>
             </div>
 
@@ -694,22 +1003,38 @@
                 <p>"One minute. Finish enough that it's showable."</p>
             </div>
 
-            <div class="cue-box">
-                <p><strong>Music:</strong> OFF at 01:57</p>
+            <div class="music-cue">
+                MUSIC: OFF at 01:57
             </div>
 
             <hr class="phase-divider">
 
-            <h3>Phase 10: Testing (01:57-02:00)</h3>
+            <h3 id="phase10">Phase 10: Testing (01:57-02:00)</h3>
 
             <div class="script-box">
                 <h4>Final Test (01:57)</h4>
                 <p>"Final step. Show your prototype to your partner via camera. Get their reaction. You have 90 seconds. Go."</p>
             </div>
 
+            <div class="music-cue">
+                MUSIC: OFF - let the testing speak for itself
+            </div>
+
             <div class="script-box">
                 <h4>Return & Close (01:59-02:00)</h4>
                 <p>"Right. You've just run a complete Design Thinking cycle in 90 minutes. You started with assumptions, threw them out, talked to humans, framed problems, generated ideas, got feedback, iterated, built prototypes, and tested them. That's the process. This afternoon we'll unpack what just happened and why it matters."</p>
+            </div>
+
+            <div class="learn-without-teaching">
+                <h4>What They Experienced (For Afternoon Unpacking)</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>The difference between assumption-driven design (false start) and human-centred design</li>
+                    <li>The shift from surface facts to deep insights (dig deeper intervention)</li>
+                    <li>The power of constraint (tight timing forced decisions and action)</li>
+                    <li>The value of iteration (feedback changed their designs)</li>
+                    <li>The role of prototyping (tangible artifacts enable better feedback)</li>
+                    <li>The complete innovation cycle - lived, not lectured</li>
+                </ul>
             </div>
 
             <hr class="phase-divider">
@@ -741,6 +1066,62 @@
             document.getElementById(id).classList.add('active');
             event.target.classList.add('active');
         }
+
+        function togglePhaseNav() {
+            const nav = document.getElementById('phaseNav');
+            const btn = event.target;
+            
+            if (nav.classList.contains('minimized')) {
+                nav.classList.remove('minimized');
+                btn.textContent = 'Hide';
+            } else {
+                nav.classList.add('minimized');
+                btn.textContent = 'Show';
+            }
+        }
+
+        function setActivePhase(event, phaseId) {
+            event.preventDefault();
+            
+            // Clear all active phase links
+            document.querySelectorAll('.phase-links a').forEach(link => {
+                link.classList.remove('active-phase');
+            });
+            
+            // Set clicked link as active
+            event.target.classList.add('active-phase');
+            
+            // Smooth scroll to phase
+            const element = document.getElementById(phaseId);
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Auto-highlight current phase on scroll
+        let isScrolling;
+        window.addEventListener('scroll', function() {
+            window.clearTimeout(isScrolling);
+            
+            isScrolling = setTimeout(function() {
+                const phases = document.querySelectorAll('[id^="phase"]');
+                let currentPhase = null;
+                
+                phases.forEach(phase => {
+                    const rect = phase.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top <= 200) {
+                        currentPhase = phase.id;
+                    }
+                });
+                
+                if (currentPhase) {
+                    document.querySelectorAll('.phase-links a').forEach(link => {
+                        link.classList.remove('active-phase');
+                        if (link.getAttribute('href') === '#' + currentPhase) {
+                            link.classList.add('active-phase');
+                        }
+                    });
+                }
+            }, 100);
+        });
     </script>
 </body>
 </html>
