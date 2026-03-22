@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Facilitation Guide - Innovation Literacy</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #E0E0D0;
+            --text-color: #333333;
+            --accent-color: #DFFF00;
+            --sidebar-bg: #1A1A1A;
+            --sidebar-text: #F5F5F5;
+            --border-color: rgba(51, 51, 51, 0.2);
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .sidebar {
+            width: 320px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid var(--accent-color);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid rgba(223, 255, 0, 0.2);
+        }
+
+        .sidebar-header h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-header p {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            color: rgba(245,245,245,0.5);
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: rgba(245, 245, 245, 0.7);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--sidebar-text);
+            background-color: rgba(223, 255, 0, 0.05);
+            border-left-color: var(--accent-color);
+        }
+
+        .main-content {
+            margin-left: 320px;
+            padding: 4rem;
+            width: calc(100% - 320px);
+            box-sizing: border-box;
+            background-image: 
+                linear-gradient(var(--border-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .content-section {
+            position: absolute;
+            left: -9999px;
+            visibility: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(224, 224, 208, 0.9);
+            padding: 2rem;
+            box-shadow: 10px 10px 0px var(--sidebar-bg);
+            border: 2px solid var(--sidebar-bg);
+            margin-bottom: 4rem;
+            width: 100%;
+        }
+
+        .content-section.active {
+            position: relative;
+            left: 0;
+            visibility: visible;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--sidebar-bg);
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h4 {
+            font-family: var(--font-display);
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .phase-box {
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid var(--sidebar-bg);
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .phase-box h4 {
+            margin-top: 0;
+            color: var(--sidebar-bg);
+            font-family: var(--font-display);
+        }
+
+        .time-marker {
+            display: inline-block;
+            background: var(--accent-color);
+            padding: 0.25rem 0.75rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--sidebar-bg);
+            margin-bottom: 0.5rem;
+        }
+
+        .facilitator-note {
+            background: #f8f8f8;
+            padding: 1rem;
+            border-left: 4px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .diagram-container {
+            background: white;
+            padding: 2rem;
+            border: 2px solid var(--sidebar-bg);
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid var(--sidebar-bg);
+            border-radius: 4px;
+        }
+
+        .info-card h4 {
+            margin-top: 0;
+            color: var(--sidebar-bg);
+        }
+
+        ul {
+            margin-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 2rem;
+            }
+            .content-section {
+                box-shadow: 5px 5px 0px var(--sidebar-bg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Week 1 Guide</h1>
+            <p>Fundamentals of Innovation Literacy</p>
+            <p style="margin-top: 1rem; font-size: 0.75rem;">Duration: 4h 10m | Remote Format</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#overview" class="active" onclick="showSection('overview')">00. Overview</a></li>
+            <li><a href="#morning-flow" onclick="showSection('morning-flow')">01. Morning Session Flow</a></li>
+            <li><a href="#provocation" onclick="showSection('provocation')">02. Opening Provocation</a></li>
+            <li><a href="#mural" onclick="showSection('mural')">03. Mural Onboarding</a></li>
+            <li><a href="#wallet" onclick="showSection('wallet')">04. Wallet Project Structure</a></li>
+            <li><a href="#wallet-phases" onclick="showSection('wallet-phases')">05. Wallet Project Phases</a></li>
+            <li><a href="#afternoon-flow" onclick="showSection('afternoon-flow')">06. Afternoon Session Flow</a></li>
+            <li><a href="#reflection" onclick="showSection('reflection')">07. Deep Reflection</a></li>
+            <li><a href="#failure" onclick="showSection('failure')">08. Failure Analysis</a></li>
+            <li><a href="#interventions" onclick="showSection('interventions')">09. Intervention Speed-Dating</a></li>
+            <li><a href="#measurement" onclick="showSection('measurement')">10. The Measurement Game</a></li>
+            <li><a href="#homework" onclick="showSection('homework')">11. Homework Brief</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <!-- SECTION: OVERVIEW -->
+        <section id="overview" class="content-section active">
+            <h2>00. Overview</h2>
+            <div class="description">
+                Week 1 delivers complete experiential immersion in all 11 elements of innovation literacy through the IDEO Wallet Project, followed by systematic reflection and diagnostic framework development.
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Session Details</h4>
+                    <p><strong>Total Duration:</strong> 4h 10m</p>
+                    <p><strong>Morning:</strong> 9:00-11:00 (2h)</p>
+                    <p><strong>Afternoon:</strong> 14:00-16:10 (2h 10m)</p>
+                    <p><strong>Format:</strong> Remote via Zoom/Teams with Mural</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Participants</h4>
+                    <p><strong>Team:</strong> Eirmersive (Camille + team)</p>
+                    <p><strong>Facilitator:</strong> Thom Conaty (Creative Spark)</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Pre-Session Setup</h4>
+                    <ul style="margin-left: 0; padding-left: 1rem;">
+                        <li>Mural board tested</li>
+                        <li>d.school ACTIVE playlist ready</li>
+                        <li>Slide deck loaded</li>
+                        <li>Breakout rooms configured</li>
+                        <li>Materials confirmed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phase-box">
+                <h3>Workshop Philosophy</h3>
+                <p><strong>Learning Approach:</strong> Experiential immersion followed by systematic reflection. Participants learn by doing, then map their experience to frameworks.</p>
+                
+                <p><strong>Facilitator Stance:</strong> Provocateur-guide, not expert-presenter. Hold the container firmly, let participants discover, name what you observe rather than prescribe what they should experience.</p>
+                
+                <p><strong>Core Principle:</strong> Trivial challenges (redesigning a wallet) keep cognitive load low so participants can focus on process, not content. Productive failure is built into the design.</p>
+            </div>
+
+            <div class="diagram-container">
+                <h3>Day Structure</h3>
+                <div class="mermaid">
+                    flowchart LR
+                        classDef morning fill:#DFFF00,stroke:#333,stroke-width:2px
+                        classDef afternoon fill:#90EE90,stroke:#333,stroke-width:2px
+                        classDef break fill:#E0E0D0,stroke:#333,stroke-width:2px
+                        
+                        A[Pre-Session<br/>8:45-9:00<br/>Tech Check]:::morning
+                        B[Opening Provocation<br/>9:00-9:15<br/>Diagnostic Baseline]:::morning
+                        C[Mural Onboarding<br/>9:15-9:30<br/>Tool Familiarisation]:::morning
+                        D[Wallet Project<br/>9:30-11:00<br/>90min Immersion]:::morning
+                        E[Lunch Break<br/>11:00-14:00]:::break
+                        F[Deep Reflection<br/>14:00-14:30<br/>Map to Framework]:::afternoon
+                        G[Failure Analysis<br/>14:30-15:00<br/>Apply Diagnostic Lens]:::afternoon
+                        H[Intervention Speed-Dating<br/>15:00-15:30<br/>Methods Exposure]:::afternoon
+                        I[Measurement Game<br/>15:30-15:50<br/>Metrics Challenge]:::afternoon
+                        J[Homework Brief<br/>16:00-16:10<br/>Week Gap Tasks]:::afternoon
+                        
+                        A --> B --> C --> D --> E
+                        E --> F --> G --> H --> I --> J
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MORNING FLOW -->
+        <section id="morning-flow" class="content-section">
+            <h2>01. Morning Session Flow</h2>
+            <div class="description">
+                The morning session is pure experiential learning - participants execute a complete Design Thinking cycle through the IDEO Wallet Project before receiving any theoretical framework.
+            </div>
+
+            <div class="diagram-container">
+                <div class="mermaid">
+                    graph TD
+                        classDef provoke fill:#ff6b6b,stroke:#333,stroke-width:2px
+                        classDef onboard fill:#DFFF00,stroke:#333,stroke-width:2px
+                        classDef immerse fill:#4ECDC4,stroke:#333,stroke-width:2px
+                        
+                        A[Opening Provocation<br/>15 mins<br/>Expose Knowledge Gaps]:::provoke
+                        B[Mural Onboarding<br/>15 mins<br/>Build Tool Fluency]:::onboard
+                        C[Wallet Project<br/>90 mins<br/>Complete Design Cycle]:::immerse
+                        
+                        A -->|Create Productive Humility| B
+                        B -->|Establish Psychological Safety| C
+                        
+                        C1[False Start<br/>5 mins]:::immerse
+                        C2[Empathy Rounds<br/>25 mins]:::immerse
+                        C3[Synthesis<br/>10 mins]:::immerse
+                        C4[Problem Framing<br/>10 mins]:::immerse
+                        C5[Ideation<br/>10 mins]:::immerse
+                        C6[Sketching<br/>10 mins]:::immerse
+                        C7[Feedback & Iteration<br/>10 mins]:::immerse
+                        C8[Prototyping<br/>7 mins]:::immerse
+                        C9[Testing<br/>3 mins]:::immerse
+                        
+                        C --> C1 --> C2 --> C3 --> C4 --> C5 --> C6 --> C7 --> C8 --> C9
+                </div>
+            </div>
+
+            <div class="facilitator-note">
+                <h4>Facilitator Energy Management</h4>
+                <p><strong>Morning:</strong> High energy, fast-paced, immersive. Keep momentum through tight timing and music during work phases.</p>
+                <p><strong>Key Principle:</strong> Let productive failure happen. Don't prevent patterns from forming - call them out in debrief instead.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: OPENING PROVOCATION -->
+        <section id="provocation" class="content-section">
+            <h2>02. Opening Provocation</h2>
+            <div class="description">
+                Deliberately expose knowledge gaps and create productive humility. Participants discover they lack shared vocabulary and understanding before being given frameworks.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">00:00-00:15 (9:00-9:15)</span>
+                <h3>Draw Your Ideal Innovation Process</h3>
+                
+                <h4>Objective</h4>
+                <p>Expose knowledge gaps, create productive humility, establish diagnostic baseline</p>
+                
+                <h4>Facilitator Script (00:00)</h4>
+                <div class="facilitator-note">
+                    <p>"Right, let's start. No preamble. I'm going to give you an instruction, and I want you to follow it without questioning or discussing. You'll have 5 minutes. Silent. Individual work. Pen and paper. Here's the task: Draw your ideal innovation process. Use whatever format makes sense to you - flowchart, diagram, sketch, words. Go."</p>
+                </div>
+                
+                <h4>What Happens (00:00-00:05)</h4>
+                <ul>
+                    <li><strong>Music:</strong> Off (silence is part of the exercise)</li>
+                    <li><strong>On screen:</strong> Slide - "Draw Your Ideal Innovation Process" (minimal, no hints)</li>
+                    <li><strong>Participant activity:</strong> Silent individual work on paper</li>
+                    <li>Some create linear flows, some loops, some complex systems</li>
+                    <li>Some will freeze (productive discomfort)</li>
+                </ul>
+                
+                <h4>Gallery Walk (00:05-00:10)</h4>
+                <div class="facilitator-note">
+                    <p>"Time. Hold your drawings up to the camera."</p>
+                    <p>"I'm going to look through these. Don't explain yours yet - just look at each other's. Notice patterns. Notice contradictions."</p>
+                </div>
+                
+                <p><strong>Facilitation Moves:</strong></p>
+                <ul>
+                    <li>Screen camera feeds to review drawings</li>
+                    <li>Point to patterns: "Three of you have linear flows. Two have loops. One has question marks."</li>
+                    <li>Point to contradictions: "This one starts with 'problem.' This one starts with 'brainstorm.' This one starts with 'research.'"</li>
+                    <li>Don't judge. Don't correct. Just observe aloud.</li>
+                </ul>
+                
+                <h4>Debrief Questions (00:10-00:13)</h4>
+                <ul>
+                    <li>"What assumptions did you make about what 'innovation process' means?"</li>
+                    <li>"What did you leave out?"</li>
+                    <li>"How confident are you that your drawing would work in practice?"</li>
+                </ul>
+                
+                <h4>Facilitator Framing (00:13-00:15)</h4>
+                <div class="facilitator-note">
+                    <p>"Good. You've just discovered the first thing about innovation: we use the same words and mean completely different things. Park your drawings. We'll return to them this afternoon."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MURAL ONBOARDING -->
+        <section id="mural" class="content-section">
+            <h2>03. Mural Onboarding</h2>
+            <div class="description">
+                Build Mural fluency through low-stakes playful tasks. Participants learn by doing, not instruction. The 30-second self-portrait normalises imperfection early.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">00:15-00:30 (9:15-9:30)</span>
+                <h3>Four Quick Tasks + Introductions</h3>
+                
+                <h4>Objective</h4>
+                <p>Mural skill building, psychological safety, set expectations, create shared visual record</p>
+                
+                <h4>Facilitator Script (00:15)</h4>
+                <div class="facilitator-note">
+                    <p>"Right, open the Mural board link in chat. Find your name card. We're going to do four quick tasks."</p>
+                </div>
+                
+                <h4>Activity Tasks (00:15-00:25)</h4>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Task 1 (3 mins)</h4>
+                        <p>Drag a sticky - fill in your name and role at Eirmersive</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Task 2 (3 mins)</h4>
+                        <p>Create new stickies - where you are from, why you are here</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Task 3 (3 mins)</h4>
+                        <p>Find an icon and place it in your section to indicate: favourite food, favourite animal, how you are feeling right now</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Task 4 (30 secs - live timer)</h4>
+                        <p>Use the Pen/Draw tool - draw a self-portrait in 30 seconds</p>
+                    </div>
+                </div>
+                
+                <h4>Skills Learned (Without Being Taught)</h4>
+                <ul>
+                    <li>Drag elements</li>
+                    <li>Add sticky notes</li>
+                    <li>Type text</li>
+                    <li>Use pen/draw tool</li>
+                    <li>Navigate board</li>
+                </ul>
+                
+                <div class="facilitator-note">
+                    <p><strong>Design Note:</strong> The 30-second self-portrait breaks any remaining tension - it is impossible to produce something polished in 30 seconds, which normalises imperfection early.</p>
+                </div>
+                
+                <h4>Verbal Introductions (00:25-00:28)</h4>
+                <div class="facilitator-note">
+                    <p>"Right, talk me through your work. Who wants to start? Brief - name, what you do, one thing you want to be able to do differently by the end of this workshop."</p>
+                </div>
+                
+                <h4>Ground Rules (00:29-00:30)</h4>
+                <ul>
+                    <li>"Cameras on throughout - active engagement required"</li>
+                    <li>"Tight timing is by design - productive pressure is part of the learning"</li>
+                    <li>"If you get stuck, keep going - failure is data"</li>
+                    <li>"Parking lot is on the Mural board - use it for tangents or questions"</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION: WALLET PROJECT STRUCTURE -->
+        <section id="wallet" class="content-section">
+            <h2>04. Wallet Project Structure</h2>
+            <div class="description">
+                90-minute experiential immersion in all 11 elements through the IDEO Wallet Project. Trivial challenge keeps cognitive load low so participants can focus on process.
+            </div>
+
+            <div class="diagram-container">
+                <div class="mermaid">
+                    graph TD
+                        classDef interrupt fill:#ff6b6b,stroke:#333,stroke-width:2px
+                        classDef empathy fill:#4ECDC4,stroke:#333,stroke-width:2px
+                        classDef define fill:#95E1D3,stroke:#333,stroke-width:2px
+                        classDef ideate fill:#F38181,stroke:#333,stroke-width:2px
+                        classDef prototype fill:#AA96DA,stroke:#333,stroke-width:2px
+                        classDef test fill:#FCBAD3,stroke:#333,stroke-width:2px
+                        
+                        A[False Start<br/>3 mins<br/>Deliberate Failure]:::interrupt
+                        B{Interrupt:<br/>Who did you<br/>design for?}:::interrupt
+                        
+                        C1[Empathy Round 1<br/>10 mins<br/>Surface Interview]:::empathy
+                        C2[Dig Deeper Intervention<br/>1 min]:::interrupt
+                        C3[Empathy Round 2<br/>10 mins<br/>Deep Interview]:::empathy
+                        
+                        D[Synthesis<br/>10 mins<br/>Process Data]:::define
+                        E[Problem Framing<br/>10 mins<br/>HMW Statements]:::define
+                        
+                        F[Ideation<br/>10 mins<br/>Volume Generation]:::ideate
+                        G[Sketching<br/>10 mins<br/>Concept Development]:::ideate
+                        
+                        H[Feedback<br/>6 mins<br/>Present to Partner]:::prototype
+                        I[Iteration<br/>3 mins<br/>Refine Based on Feedback]:::prototype
+                        J[Prototyping<br/>7 mins<br/>Build Physical]:::prototype
+                        
+                        K[Testing<br/>3 mins<br/>Get User Reaction]:::test
+                        
+                        A --> B
+                        B -->|Reframe| C1
+                        C1 --> C2
+                        C2 --> C3
+                        C3 --> D
+                        D --> E
+                        E --> F
+                        F --> G
+                        G --> H
+                        H --> I
+                        I --> J
+                        J --> K
+                </div>
+            </div>
+
+            <div class="phase-box">
+                <h3>Resources Required</h3>
+                <ul>
+                    <li>IDEO Wallet Project facilitator guide (reference)</li>
+                    <li>d.school ACTIVE playlist (music during work phases)</li>
+                    <li>Mural board with Wallet Project workspaces pre-configured</li>
+                    <li>Breakout rooms for paired work</li>
+                    <li>Participants have prototyping materials at hand (paper, pens, scissors, tape, household items)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION: WALLET PROJECT PHASES -->
+        <section id="wallet-phases" class="content-section">
+            <h2>05. Wallet Project Phases</h2>
+            <div class="description">
+                Detailed breakdown of each phase in the 90-minute Wallet Project cycle, including facilitator scripts, timing, and expected outcomes.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">00:30-00:35</span>
+                <h3>Phase 1: False Start</h3>
+                <p><strong>Objective:</strong> Interrupt assumption-driven design, demonstrate human-centred vs solution-jumping</p>
+                
+                <div class="facilitator-note">
+                    <p><strong>Script:</strong> "Right, your challenge: redesign the wallet. You have 3 minutes. Go."</p>
+                </div>
+                
+                <p><strong>What Happens:</strong> Participants jump immediately to solution generation, sketch wallet designs based on assumptions, no user research or problem framing.</p>
+                
+                <p><strong>At 00:33:</strong> "Time. Show me what you've got."</p>
+                <p><strong>Gallery Walk:</strong> "Interesting. Who did you design this for?"</p>
+                <p><strong>Expected Responses:</strong> "Um... everyone?" "People?" "Wallet users?"</p>
+                
+                <div class="facilitator-note">
+                    <p><strong>Reframe:</strong> "Right. You just designed wallets for imaginary people based on your assumptions. That's not innovation - that's guessing. Let's start again. This time, you'll talk to a real human first."</p>
+                </div>
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">00:35-00:45</span>
+                <h3>Phase 2: Empathy Round 1</h3>
+                <p><strong>Objective:</strong> Initial user research, establish paired work, expose surface-level inquiry</p>
+                
+                <div class="facilitator-note">
+                    <p><strong>Script:</strong> "You're going to pair up. One of you is the interviewer, one is the user. Interviewer: your job is to understand your partner's relationship with their wallet. User: answer honestly. You have 5 minutes. Then you'll switch roles. Breakout rooms opening now."</p>
+                </div>
+                
+                <p><strong>Interview Prompts (posted in Mural):</strong></p>
+                <ul>
+                    <li>"Tell me about your current wallet"</li>
+                    <li>"When do you use it?"</li>
+                    <li>"What frustrates you about it?"</li>
+                    <li>"What works well?"</li>
+                </ul>
+                
+                <p><strong>Facilitator During Breakouts:</strong> Pop into rooms briefly, listen, don't intervene yet. Most will stay surface-level.</p>
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">00:45-01:00</span>
+                <h3>Phase 3: "Dig Deeper" Intervention + Empathy Round 2</h3>
+                <p><strong>Objective:</strong> Pattern interrupt, push beyond surface-level inquiry</p>
+                
+                <div class="facilitator-note">
+                    <p><strong>Quick Reflection:</strong> "Back to the main room. Quick reflection: what did you learn about your partner's wallet?"</p>
+                    <p><strong>Expected Responses:</strong> "They keep receipts in it" / "They don't like the colour" / "It's too bulky"</p>
+                </div>
+                
+                <div class="facilitator-note">
+                    <p><strong>Intervention:</strong> "Right. Those are facts. Now I want you to go deeper. Why do they keep receipts? What does their wallet say about how they live? What jobs is their wallet doing beyond holding money? You're going back in for round 2. Dig deeper this time."</p>
+                </div>
+                
+                <p><strong>New Prompts (posted in Mural):</strong></p>
+                <ul>
+                    <li>"Why do you organise your wallet that way?"</li>
+                    <li>"What would you lose if your wallet disappeared?"</li>
+                    <li>"When does your wallet fail you?"</li>
+                    <li>"What does your wallet say about you?"</li>
+                </ul>
+                
+                <p><strong>What Participants Do:</strong> Deeper questioning, uncover emotional connections, identity aspects, system implications. Aha moments: "I never thought about it that way"</p>
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">01:00-01:10</span>
+                <h3>Phase 4: Synthesis</h3>
+                <p><strong>Objective:</strong> Process interview data, identify patterns and insights</p>
+                
+                <div class="facilitator-note">
+                    <p>"Right, you've got data. Now make sense of it. Individual work: capture the most interesting things you learned about your partner. Not just facts - insights. What surprised you? What patterns did you notice? What needs are hidden in what they said? You have 7 minutes. Use sticky notes in Mural."</p>
+                </div>
+                
+                <p><strong>On Screen:</strong> Mural synthesis workspace with columns: Facts, Patterns, Insights, Needs</p>
+                <p><strong>Music:</strong> On (low volume)</p>
+                
+                <p><strong>Brief Share (01:08-01:10):</strong> "Quick round: one insight each. What's the most interesting thing you learned?"</p>
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">01:10-01:20</span>
+                <h3>Phase 5: Problem Framing</h3>
+                <p><strong>Objective:</strong> Define the design challenge, practice problem framing</p>
+                
+                <div class="facilitator-note">
+                    <p>"Now frame the problem you're solving. Not 'design a better wallet' - that's a solution masquerading as a problem. What's the actual need your partner has? Frame it as a question: 'How might we...?'</p>
+                    <p>Example: 'How might we help Sarah keep track of receipts without bulk?' or 'How might we make Mark feel more organised when he travels?'</p>
+                    <p>You have 7 minutes. Write multiple versions. Pick the one that feels most generative."</p>
+                </div>
+                
+                <p><strong>Brief Share (01:18-01:20):</strong> "Quick round: read your HMW statement."</p>
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">01:20-01:30</span>
+                <h3>Phase 6: Ideation</h3>
+                <p><strong>Objective:</strong> Generate multiple solutions, defer judgement</p>
+                
+                <div class="facilitator-note">
+                    <p>"Now generate solutions. Quantity over quality. Defer judgement - don't critique your ideas yet. Sketch, write, diagram - whatever gets ideas out fast. You have 8 minutes. Go for volume."</p>
+                </div>
+                
+                <p><strong>Music:</strong> On (higher energy)</p>
+                <p><strong>At 01:28:</strong> "Last minute. Circle your top 3 ideas."</p>
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">01:30-01:50</span>
+                <h3>Phases 7-8: Sketching + Feedback & Iteration</h3>
+                
+                <h4>Sketching (01:30-01:40)</h4>
+                <div class="facilitator-note">
+                    <p>"Pick one idea. Sketch it in enough detail that someone else can understand it. You have 8 minutes. Don't aim for perfection - aim for clarity."</p>
+                </div>
+                
+                <h4>Feedback (01:40-01:46)</h4>
+                <div class="facilitator-note">
+                    <p>"Back to your pairs. You're going to show your sketch to your partner - the person you interviewed. Here's the rule: don't defend your design. Just show it and ask: 'What works? What doesn't? What's missing?' Listen. Take notes. You have 3 minutes each."</p>
+                </div>
+                
+                <h4>Iteration (01:46-01:50)</h4>
+                <div class="facilitator-note">
+                    <p>"You've got feedback. Now iterate. Modify your design based on what you learned. You have 3 minutes."</p>
+                </div>
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">01:50-02:00</span>
+                <h3>Phases 9-10: Prototyping + Testing</h3>
+                
+                <h4>Prototyping (01:50-01:57)</h4>
+                <p><strong>Objective:</strong> Build tangible prototype, work under constraint</p>
+                
+                <div class="facilitator-note">
+                    <p>"Now build it. Use whatever materials you have at hand - paper, pens, scissors, tape, household items. You have 7 minutes. Make something your partner can hold and react to. Go."</p>
+                </div>
+                
+                <p><strong>Music:</strong> On (high energy)</p>
+                
+                <h4>Testing (01:57-02:00)</h4>
+                <div class="facilitator-note">
+                    <p>"Final step. Show your prototype to your partner via camera. Get their reaction. You have 90 seconds. Go."</p>
+                </div>
+                
+                <h4>Closing (01:59-02:00)</h4>
+                <div class="facilitator-note">
+                    <p>"Right. You've just run a complete Design Thinking cycle in 90 minutes. You started with assumptions, threw them out, talked to humans, framed problems, generated ideas, got feedback, iterated, built prototypes, and tested them. That's the process. This afternoon we'll unpack what just happened and why it matters."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: AFTERNOON FLOW -->
+        <section id="afternoon-flow" class="content-section">
+            <h2>06. Afternoon Session Flow</h2>
+            <div class="description">
+                Afternoon shifts to systematic reflection and framework building. Participants map their morning experience to Design Thinking frameworks, then apply diagnostic lenses to real-world failures.
+            </div>
+
+            <div class="diagram-container">
+                <div class="mermaid">
+                    graph TD
+                        classDef reflect fill:#95E1D3,stroke:#333,stroke-width:2px
+                        classDef apply fill:#F38181,stroke:#333,stroke-width:2px
+                        classDef expose fill:#AA96DA,stroke:#333,stroke-width:2px
+                        classDef bridge fill:#FCBAD3,stroke:#333,stroke-width:2px
+                        
+                        A[Deep Reflection<br/>30 mins<br/>Map Experience to Framework]:::reflect
+                        B[Failure Analysis<br/>30 mins<br/>Apply Diagnostic Lens]:::apply
+                        C[Intervention Speed-Dating<br/>30 mins<br/>Methods Exposure]:::expose
+                        D[Measurement Game<br/>20 mins<br/>Metrics Challenge]:::expose
+                        E[Problem Space Map Demo<br/>10 mins<br/>Systems Thinking Tool]:::bridge
+                        F[Homework Brief<br/>10 mins<br/>Week Gap Tasks]:::bridge
+                        
+                        A --> B --> C --> D --> E --> F
+                        
+                        A1[Map Morning Activities<br/>to Design Thinking Phases]:::reflect
+                        A2[Name All 11 Elements<br/>Make Explicit]:::reflect
+                        A3[Framework Handoff<br/>IDEO Reference PDF]:::reflect
+                        
+                        A --> A1 --> A2 --> A3
+                        
+                        B1[Small Groups<br/>Share Real Failures]:::apply
+                        B2[Map to Framework<br/>Where Did It Break?]:::apply
+                        B3[Pattern Recognition<br/>Why Innovation Fails]:::apply
+                        
+                        B --> B1 --> B2 --> B3
+                </div>
+            </div>
+
+            <div class="facilitator-note">
+                <h4>Energy Management</h4>
+                <p><strong>Afternoon:</strong> Reflective but not slow - maintain momentum through activities. Shift from high-energy immersion to focused analytical work.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: DEEP REFLECTION -->
+        <section id="reflection" class="content-section">
+            <h2>07. Deep Reflection</h2>
+            <div class="description">
+                Map morning experience onto Design Thinking framework. Make process explicit by naming what participants experienced and connecting it to the 11 elements.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">00:00-00:30 (14:00-14:30)</span>
+                <h3>Framework Handoff</h3>
+                
+                <h4>Objective</h4>
+                <p>Map experience to Design Thinking framework, make process explicit</p>
+                
+                <h4>Facilitator Script (00:00-00:05)</h4>
+                <div class="facilitator-note">
+                    <p>"This morning you executed a complete innovation cycle. Now we're going to map what you did onto the Design Thinking framework. This is the handoff - I'm giving you the map for the territory you just travelled."</p>
+                </div>
+                
+                <p><strong>On Screen:</strong> Slide showing Design Thinking phases (Empathise, Define, Ideate, Prototype, Test) as loop diagram</p>
+                
+                <h4>Facilitation Moves</h4>
+                <ul>
+                    <li>Walk through each phase of Design Thinking</li>
+                    <li>Point back to morning activities: "When you interviewed your partner - that was Empathise. When you wrote HMW statements - that was Define."</li>
+                    <li>Name what they experienced: "The false-start? That was an intervention. 'Dig deeper'? Another intervention. The 7-minute prototyping constraint? Intervention."</li>
+                </ul>
+                
+                <h4>Facilitation Questions (00:05-00:15)</h4>
+                <ul>
+                    <li>"What shifted between empathy round 1 and round 2?"</li>
+                    <li>"What happened when you framed the problem as 'How might we...?' versus 'design a better wallet'?"</li>
+                    <li>"How did tight timing affect your work - help or hurt?"</li>
+                    <li>"What role did the Mural board play versus paper prototyping?"</li>
+                </ul>
+                
+                <h4>Naming the 11 Elements (00:15-00:20)</h4>
+                <div class="facilitator-note">
+                    <p>"Right. Let me name what you experienced:</p>
+                    <ul>
+                        <li><strong>Process:</strong> Design Thinking gave you a structure - Empathise, Define, Ideate, Prototype, Test. Without it, you'd have stayed in the false-start.</li>
+                        <li><strong>Interventions:</strong> 'Dig deeper,' 'don't defend your prototype,' '7-minute build' - these are methods that push you to the next stage.</li>
+                        <li><strong>Tools:</strong> Mural, paper, pens, scissors. WHAT you use.</li>
+                        <li><strong>Skills:</strong> Observation, questioning, synthesis, creative thinking, systems thinking.</li>
+                        <li><strong>Mindset:</strong> Curiosity, deferring judgement, challenging assumptions.</li>
+                        <li><strong>Behaviours:</strong> Active listening, not defending your ideas, disciplined experimentation.</li>
+                        <li><strong>Environment:</strong> Time boundaries, digital space, permission to fail.</li>
+                        <li><strong>Collaboration:</strong> Paired work, giving feedback, receiving feedback without defensiveness.</li>
+                        <li><strong>Facilitation:</strong> I managed the process, kept time, intervened when needed.</li>
+                        <li><strong>Governance & Resources:</strong> The time you were given, the materials, the permission to experiment - that's what these look like in practice.</li>
+                    </ul>
+                    <p>All 11 elements were active this morning. These are the foundations of innovation work."</p>
+                </div>
+                
+                <h4>Framework Handoff (00:20-00:30)</h4>
+                <p><strong>Action:</strong> Post IDEO Design Thinking Framework PDF in Mural + chat</p>
+                <div class="facilitator-note">
+                    <p>"This is your reference. When you're back at work and someone says 'we need to innovate,' you'll have a foundational understanding of what process looks like."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: FAILURE ANALYSIS -->
+        <section id="failure" class="content-section">
+            <h2>08. Failure Analysis Workshop</h2>
+            <div class="description">
+                Apply diagnostic lens to real-world innovation failures. Participants use their new framework to identify where innovation broke in their own contexts.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">00:30-01:00 (14:30-15:00)</span>
+                <h3>Diagnosing Real Failures</h3>
+                
+                <h4>Objective</h4>
+                <p>Apply diagnostic lens to real-world innovation failures</p>
+                
+                <h4>Facilitator Script (00:30-00:32)</h4>
+                <div class="facilitator-note">
+                    <p>"Right, you brought examples of failed innovations from your context. We're going to analyse them using the framework you now have. Small groups - 3-4 people. You have 20 minutes. For each failure:</p>
+                    <ol>
+                        <li>Map it onto the Design Thinking process - where did it break?</li>
+                        <li>What was missing? Which elements?</li>
+                        <li>What would have changed the outcome?"</li>
+                    </ol>
+                </div>
+                
+                <p><strong>Format:</strong> Breakout rooms, small groups, 20 minutes</p>
+                <p><strong>On Screen:</strong> Mural failure analysis workspace (columns for each Design Thinking phase)</p>
+                
+                <h4>What Participants Do</h4>
+                <ul>
+                    <li>Share failure examples</li>
+                    <li>Map failures onto Design Thinking phases</li>
+                    <li>Identify missing elements using morning's framework</li>
+                    <li>Document patterns</li>
+                </ul>
+                
+                <h4>Debrief (00:50-00:58)</h4>
+                <p>Each group shares one failure and diagnosis. Facilitator listens for patterns.</p>
+                
+                <p><strong>Expected Patterns:</strong></p>
+                <ul>
+                    <li>"We jumped to solutions" (Define phase missing)</li>
+                    <li>"We didn't talk to users" (Empathise phase missing)</li>
+                    <li>"We had the process but no time to use it" (Environment/Resources missing)</li>
+                    <li>"Leadership wanted ROI metrics during discovery" (wrong measurement, operational pressure)</li>
+                </ul>
+                
+                <h4>Facilitator Framing (00:58-01:00)</h4>
+                <div class="facilitator-note">
+                    <p>"Notice the patterns. Innovation fails when:</p>
+                    <ul>
+                        <li>Process is cargo-culted (we say we do Design Thinking but skip the hard parts)</li>
+                        <li>Empathy is skipped (we design for imaginary users)</li>
+                        <li>Problems are poorly framed (we solve the wrong thing well)</li>
+                        <li>Wrong metrics are applied (operational measures crush exploratory work)</li>
+                        <li>Practitioners have process skills but no organisational defence</li>
+                    </ul>
+                    <p>You now have a foundational diagnostic lens. You can start recognising where and why innovation breaks."</p>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <h3>Common Failure Patterns</h3>
+                <div class="mermaid">
+                    graph LR
+                        classDef fail fill:#ff6b6b,stroke:#333,stroke-width:2px
+                        
+                        A[Innovation Initiative]
+                        
+                        B[Cargo-Culted Process<br/>Process without depth]:::fail
+                        C[Skipped Empathy<br/>Imaginary users]:::fail
+                        D[Poor Problem Framing<br/>Solving wrong thing]:::fail
+                        E[Wrong Metrics<br/>Operational pressure]:::fail
+                        F[No Organisational Defence<br/>Practitioners lack protection]:::fail
+                        
+                        G[Failed Innovation]:::fail
+                        
+                        A --> B --> G
+                        A --> C --> G
+                        A --> D --> G
+                        A --> E --> G
+                        A --> F --> G
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: INTERVENTIONS -->
+        <section id="interventions" class="content-section">
+            <h2>09. Intervention Speed-Dating</h2>
+            <div class="description">
+                Hands-on exposure to tactical methods and frameworks. Participants rotate through five intervention stations to build awareness of what tools exist.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">01:00-01:30 (15:00-15:30)</span>
+                <h3>Five Methods, Five Minutes Each</h3>
+                
+                <h4>Objective</h4>
+                <p>Hands-on exposure to tactical methods and frameworks</p>
+                
+                <h4>Facilitator Script (01:00-01:02)</h4>
+                <div class="facilitator-note">
+                    <p>"You've experienced interventions this morning - 'dig deeper,' 'don't defend,' time constraints. Now you're going to try five specific methods that help you move through the innovation process. Five stations, five minutes each. You'll rotate through all of them. Each station has a method and an instruction to apply it to the Wallet Project challenge. Go fast - focus on understanding what each method does, not perfecting it."</p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Station 1: How Might We</h4>
+                    <p>Linguistic reframing for problem definition</p>
+                    <p><strong>Time:</strong> 5 minutes</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Station 2: 2x2 Prioritisation</h4>
+                    <p>Decision-making framework (Impact vs Effort)</p>
+                    <p><strong>Time:</strong> 5 minutes</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Station 3: Assumption Mapping</h4>
+                    <p>Identify and test assumptions</p>
+                    <p><strong>Time:</strong> 5 minutes</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Station 4: Stakeholder Mapping</h4>
+                    <p>See the system around the problem</p>
+                    <p><strong>Time:</strong> 5 minutes</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Station 5: SWOT Analysis</h4>
+                    <p>Analyse strengths, weaknesses, opportunities, threats</p>
+                    <p><strong>Time:</strong> 5 minutes</p>
+                </div>
+            </div>
+
+            <div class="phase-box">
+                <h4>Format</h4>
+                <p>Self-guided rotation through Mural stations. Each station contains:</p>
+                <ul>
+                    <li>Method description (1-2 sentences)</li>
+                    <li>Instruction: "Apply this to the Wallet Project"</li>
+                    <li>Workspace for doing the exercise</li>
+                </ul>
+                
+                <h4>Debrief (01:25-01:30)</h4>
+                <ul>
+                    <li>"Which method felt most natural?"</li>
+                    <li>"Which felt forced?"</li>
+                    <li>"When would you use each one?"</li>
+                </ul>
+                
+                <div class="facilitator-note">
+                    <p>"These are interventions - structured methods that help you advance the process. Some will fit your context, some won't. The point is knowing they exist and beginning to recognise when to deploy them. This is foundations work - you're building awareness of what's available, not mastery of each method."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MEASUREMENT -->
+        <section id="measurement" class="content-section">
+            <h2>10. The Measurement Game</h2>
+            <div class="description">
+                Expose stage-inappropriate metrics and operational pressure on innovation. Participants discover how wrong measurement crushes innovation faster than bad ideas.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">01:30-01:50 (15:30-15:50)</span>
+                <h3>Funding Committee Exercise</h3>
+                
+                <h4>Objective</h4>
+                <p>Expose stage-inappropriate metrics, understand operational pressure on innovation</p>
+                
+                <h4>Facilitator Script (01:30-01:32)</h4>
+                <div class="facilitator-note">
+                    <p>"Right, you're on a funding committee. You have budget to allocate across three innovation projects. Here are the projects:</p>
+                    <ul>
+                        <li><strong>Project A:</strong> Early empathy phase - team conducting user interviews</li>
+                        <li><strong>Project B:</strong> Mid-prototyping phase - team building and testing prototypes</li>
+                        <li><strong>Project C:</strong> Late validation phase - team assessing market fit</li>
+                    </ul>
+                    <p>You have these metrics to guide your decision:</p>
+                    <ul>
+                        <li>Total number of ideas generated</li>
+                        <li>ROI projection</li>
+                        <li>Number of prototypes built</li>
+                        <li>Customer satisfaction score</li>
+                        <li>Time to market</li>
+                    </ul>
+                    <p>You have 10 minutes. Decide how to allocate funding. Use the metrics provided."</p>
+                </div>
+                
+                <h4>What Participants Do (01:32-01:42)</h4>
+                <ul>
+                    <li>Review scenarios</li>
+                    <li>Apply provided metrics</li>
+                    <li>Allocate funding</li>
+                    <li>Justify decisions</li>
+                </ul>
+                
+                <h4>Debrief (01:42-01:48)</h4>
+                <ul>
+                    <li>"How did you allocate funding?"</li>
+                    <li>"Which metrics drove your decisions?"</li>
+                    <li>"Did anything feel wrong?"</li>
+                </ul>
+                
+                <p><strong>Expected Responses:</strong></p>
+                <ul>
+                    <li>"We funded Project C because it had ROI data"</li>
+                    <li>"Project A looked weak - no metrics yet"</li>
+                    <li>"The metrics didn't fit the projects"</li>
+                </ul>
+                
+                <h4>Facilitator Reveal (01:48-01:50)</h4>
+                <div class="facilitator-note">
+                    <p>"Right. Here's what just happened: I gave you completely stage-inappropriate metrics. You can't measure ROI during empathy - you don't have a solution yet. Counting ideas during validation is meaningless - you're testing fit, not generating options. But these are the metrics organisations apply to innovation all the time. And when innovation gets measured wrong, it gets killed.</p>
+                    
+                    <p>Stage-appropriate measurement matters:</p>
+                    <ul>
+                        <li>Empathy phase: Quality of insights, depth of understanding</li>
+                        <li>Ideation phase: Diversity of concepts, not volume</li>
+                        <li>Prototyping phase: Learning velocity, feedback quality</li>
+                        <li>Validation phase: Evidence of fit, market signals</li>
+                    </ul>
+                    <p>Wrong metrics crush innovation faster than bad ideas."</p>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <h3>Stage-Appropriate Measurement</h3>
+                <div class="mermaid">
+                    graph LR
+                        classDef empathy fill:#4ECDC4,stroke:#333,stroke-width:2px
+                        classDef define fill:#95E1D3,stroke:#333,stroke-width:2px
+                        classDef ideate fill:#F38181,stroke:#333,stroke-width:2px
+                        classDef prototype fill:#AA96DA,stroke:#333,stroke-width:2px
+                        classDef test fill:#FCBAD3,stroke:#333,stroke-width:2px
+                        
+                        A[Empathise]:::empathy
+                        B[Define]:::define
+                        C[Ideate]:::ideate
+                        D[Prototype]:::prototype
+                        E[Test]:::test
+                        
+                        A1[Quality of Insights<br/>Depth of Understanding]:::empathy
+                        B1[Problem Clarity<br/>Framing Precision]:::define
+                        C1[Concept Diversity<br/>NOT Volume]:::ideate
+                        D1[Learning Velocity<br/>Feedback Quality]:::prototype
+                        E1[Evidence of Fit<br/>Market Signals]:::test
+                        
+                        A --> A1
+                        B --> B1
+                        C --> C1
+                        D --> D1
+                        E --> E1
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: HOMEWORK -->
+        <section id="homework" class="content-section">
+            <h2>11. Homework Brief</h2>
+            <div class="description">
+                Three bridging tasks for the week gap that connect today's experience with next week's session and real-world application.
+            </div>
+
+            <div class="phase-box">
+                <span class="time-marker">02:00-02:10 (16:00-16:10)</span>
+                <h3>Week Gap Activities</h3>
+                
+                <h4>Objective</h4>
+                <p>Set up week gap activities - bridge what you experienced today with what you'll do next week</p>
+                
+                <h4>Facilitator Script (02:00-02:02)</h4>
+                <div class="facilitator-note">
+                    <p>"Right, three tasks for the week gap. These are not busy work - they bridge what you experienced today with what you'll do next week."</p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Task 1: Read</h4>
+                    <p>Design Thinking framework document - full process overview. Link in Mural and chat. This gives you the complete map.</p>
+                    <p><strong>Time:</strong> 30 minutes</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Task 2: Map</h4>
+                    <p>Use the Problem Space Map to analyse YOUR challenge - something real from your context. Template provided. Focus on seeing interconnections across data, tech, product, experience, system, and implications.</p>
+                    <p><strong>Time:</strong> 30-45 minutes</p>
+                    <p><strong>Deliverable:</strong> Upload to Mural before next week</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Task 3: Notice</h4>
+                    <p>Identify 2-3 moments in your work where Design Thinking elements would change outcomes. Bring specific examples to next week's session.</p>
+                    <p><strong>Time:</strong> Ongoing observation during the week</p>
+                    <p><strong>Deliverable:</strong> Written notes for discussion</p>
+                </div>
+            </div>
+
+            <div class="phase-box">
+                <h4>Homework Assets Posted</h4>
+                <ul>
+                    <li>Design Thinking framework PDF</li>
+                    <li>Problem Space Map template (link: <a href="https://dschool.stanford.edu/tools/map-the-problem-space" target="_blank">d.school Problem Space Map</a>)</li>
+                    <li>Homework submission area in Mural</li>
+                </ul>
+                
+                <h4>Facilitator Closing (02:08-02:10)</h4>
+                <div class="facilitator-note">
+                    <p>"Today you experienced complete innovation cycles. Next week you'll do it again with conscious competence - you'll know what you're doing and why. You'll also work on governance and resources - how to advocate for what innovation needs organisationally.</p>
+                    
+                    <p>This is foundations work - you'll leave with baseline literacy, not mastery. Sufficient to recognise the landscape, know what matters, and build capability through practice.</p>
+                    
+                    <p>See you next week. Same time: 9:30am start for Week 2."</p>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <h3>Week 1 to Week 2 Bridge</h3>
+                <div class="mermaid">
+                    graph TD
+                        classDef week1 fill:#DFFF00,stroke:#333,stroke-width:2px
+                        classDef gap fill:#E0E0D0,stroke:#333,stroke-width:2px
+                        classDef week2 fill:#90EE90,stroke:#333,stroke-width:2px
+                        
+                        A[Week 1<br/>Experiential Learning<br/>+ Framework Mapping]:::week1
+                        
+                        B[Read<br/>Design Thinking<br/>Framework]:::gap
+                        C[Map<br/>Real Challenge<br/>Problem Space Map]:::gap
+                        D[Notice<br/>Application<br/>Opportunities]:::gap
+                        
+                        E[Week 2<br/>Conscious Competence<br/>+ Organisational Defence]:::week2
+                        
+                        A --> B
+                        A --> C
+                        A --> D
+                        B --> E
+                        C --> E
+                        D --> E
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#ffffff',
+                primaryTextColor: '#333333',
+                primaryBorderColor: '#333333',
+                lineColor: '#333333',
+                secondaryColor: '#DFFF00',
+                tertiaryColor: '#E0E0D0'
+            },
+            fontFamily: 'Inter, sans-serif'
+        });
+
+        function showSection(id) {
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

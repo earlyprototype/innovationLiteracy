@@ -1,0 +1,77 @@
+{
+  "element_palettes": {
+    "0":  "a_terracotta_sage",
+    "1":  "d_amber_teal",
+    "2":  "d_amber_teal",
+    "3":  "b_coral_teal",
+    "4":  "c_orange_violet",
+    "5":  "a_terracotta_sage",
+    "6":  "a_terracotta_sage",
+    "7":  "a_terracotta_sage",
+    "8":  "c_orange_violet",
+    "9":  "c_orange_violet",
+    "10": "b_coral_teal",
+    "11": "b_coral_teal"
+  },
+  "palette_details": {
+    "a_terracotta_sage": {
+      "label": "Original",
+      "description": "Muted, earthy architectural tones.",
+      "background": { "name": "Cream", "hex": "#FAF9F6" },
+      "primary": { "name": "Terracotta", "hex": "#E27D60" },
+      "secondary": { "name": "Sage Green", "hex": "#85BAA1" },
+      "text": { "name": "Deep Charcoal", "hex": "#333333" }
+    },
+    "b_coral_teal": {
+      "label": "Electric Editorial",
+      "description": "Vibrant, high-energy magazine aesthetic.",
+      "background": { "name": "Cool white", "hex": "#F8F9FA" },
+      "primary": { "name": "Electric Coral", "hex": "#FF6B6B" },
+      "secondary": { "name": "Vibrant Teal", "hex": "#00E5FF" },
+      "text": { "name": "Pitch Black", "hex": "#111111" }
+    },
+    "c_orange_violet": {
+      "label": "Studio Clean",
+      "description": "Precise, studio-modern tones.",
+      "background": { "name": "Light sand", "hex": "#F5F5F0" },
+      "primary": { "name": "Burnt Orange", "hex": "#E25C2B" },
+      "secondary": { "name": "Deep Violet", "hex": "#5A3B8C" },
+      "text": { "name": "Dark Ink", "hex": "#1A1A1A" }
+    },
+    "d_amber_teal": {
+      "label": "Innovation Warm",
+      "description": "Optimistic, energetic tech-forward tones.",
+      "background": { "name": "Warm oat", "hex": "#FDFBF7" },
+      "primary": { "name": "Amber", "hex": "#F2A900" },
+      "secondary": { "name": "Deep Ocean Teal", "hex": "#005B6E" },
+      "text": { "name": "Charcoal", "hex": "#1C2A33" }
+    }
+  },
+  "type_to_template": {
+    "overview": ["title", "content"],
+    "reference": ["content"],
+    "structured-method": ["content"],
+    "concept": ["content"],
+    "quick-ref": ["content"],
+    "checklist": ["content"],
+    "taxonomy": ["content"]
+  },
+  "element_groupings": {
+    "a_terracotta_sage": {
+      "rationale": "Foundational/human — earthy, grounded",
+      "elements": ["0 Innovation Literacy", "5 Mindset", "6 Behaviours", "7 Environment"]
+    },
+    "b_coral_teal": {
+      "rationale": "Tech/structural — electric, high-energy",
+      "elements": ["3 Tools", "10 Governance", "11 Resources"]
+    },
+    "c_orange_violet": {
+      "rationale": "Creative/interpersonal — studio-modern",
+      "elements": ["4 Skills & Competencies", "8 Collaboration", "9 Facilitation"]
+    },
+    "d_amber_teal": {
+      "rationale": "Methodological — warm, structured",
+      "elements": ["1 Process", "2 Interventions"]
+    }
+  }
+}

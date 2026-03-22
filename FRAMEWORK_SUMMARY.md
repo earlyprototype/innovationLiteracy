@@ -68,5 +68,5 @@ Eirmersive (XR advocates, R&D partners), led by Camille
 
 ---
 
-_Framework version: 1.0_  
-_Last updated: 2026-03-18_
+_Framework version: 2.0_  
+_Last updated: 2026-03-21_

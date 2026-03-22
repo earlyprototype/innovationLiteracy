@@ -43,6 +43,10 @@ The facilitation gap - the assumption that groups can self-facilitate - is one o
 - Prototype/Test: focus on structure, feedback capture, maintaining objectivity
 - Evaluation/Decision: focus on rigour, ensuring all perspectives considered, managing convergence
 
+**AI-Augmented Sessions:**
+
+When AI tools are present in workshops, facilitation role expands to orchestrate human-AI interaction patterns, prevent common failure modes, and ensure AI accelerates rather than substitutes for human thinking. See [AI-Augmented Facilitation](./resources/ai_augmented_facilitation.md) for comprehensive guidance on managing AI-integrated sessions.
+
 ## Further Reading
 
 **Key Frameworks:**

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Afternoon - Facilitator Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #E0E0D0;
+            --text-color: #333333;
+            --accent-color: #DFFF00;
+            --sidebar-bg: #1A1A1A;
+            --sidebar-text: #F5F5F5;
+            --border-color: rgba(51, 51, 51, 0.2);
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid var(--accent-color);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid rgba(223, 255, 0, 0.2);
+        }
+
+        .sidebar-header h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-header p {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            color: rgba(245,245,245,0.5);
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: rgba(245, 245, 245, 0.7);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--sidebar-text);
+            background-color: rgba(223, 255, 0, 0.05);
+            border-left-color: var(--accent-color);
+        }
+
+        .main-content {
+            margin-left: 280px;
+            padding: 3rem;
+            width: calc(100% - 280px);
+            box-sizing: border-box;
+            background-image: 
+                linear-gradient(var(--border-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .content-section {
+            position: absolute;
+            left: -9999px;
+            visibility: hidden;
+            max-width: 1000px;
+            background: rgba(224, 224, 208, 0.95);
+            padding: 2rem;
+            box-shadow: 8px 8px 0px var(--sidebar-bg);
+            border: 2px solid var(--sidebar-bg);
+        }
+
+        .content-section.active {
+            position: relative;
+            left: 0;
+            visibility: visible;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--sidebar-bg);
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--sidebar-bg);
+        }
+
+        h4 {
+            font-family: var(--font-display);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .script-box {
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid var(--sidebar-bg);
+            margin: 1rem 0;
+            border-left: 6px solid var(--accent-color);
+        }
+
+        .script-box h4 {
+            margin-top: 0;
+            color: var(--sidebar-bg);
+        }
+
+        .script-box p {
+            margin: 0.5rem 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .cue-box {
+            background: #f8f8f8;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid var(--sidebar-bg);
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        .watch-for {
+            background: rgba(223, 255, 0, 0.15);
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .watch-for h4 {
+            margin-top: 0;
+        }
+
+        .prompts-list {
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid var(--sidebar-bg);
+            margin: 1rem 0;
+        }
+
+        .prompts-list h4 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-family: var(--font-display);
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin: 0.75rem 0;
+            line-height: 1.6;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--sidebar-bg);
+        }
+
+        .phase-divider {
+            height: 3px;
+            background: var(--accent-color);
+            margin: 2rem 0;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Afternoon Session</h1>
+            <p>Week 1 - Innovation Literacy</p>
+            <p style="margin-top: 1rem; font-size: 0.75rem;">14:00-16:00 | 2 hours</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#overview" class="active" onclick="showSection('overview')">0. Overview</a></li>
+            <li><a href="#reflection" onclick="showSection('reflection')">1. Deep Reflection</a></li>
+            <li><a href="#failure" onclick="showSection('failure')">2. Failure Analysis</a></li>
+            <li><a href="#interventions" onclick="showSection('interventions')">3. Intervention Speed-Dating</a></li>
+            <li><a href="#measurement" onclick="showSection('measurement')">4. Measurement Game</a></li>
+            <li><a href="#problem-space" onclick="showSection('problem-space')">5. Problem Space Map Demo</a></li>
+            <li><a href="#homework" onclick="showSection('homework')">6. Homework Brief</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <!-- OVERVIEW -->
+        <section id="overview" class="content-section active">
+            <h2>0. Overview</h2>
+            
+            <div class="watch-for">
+                <h4>Facilitator Stance - Afternoon</h4>
+                <p>Shift from high-energy immersion to focused analytical work. Reflective but not slow - maintain momentum through activities. Continue to name what you observe, connect morning experience to frameworks.</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>Music:</strong> OFF for most of afternoon (only on during individual work phases)</p>
+                <p><strong>On screen:</strong> Start with Mural board, switch to slides for framework presentations</p>
+            </div>
+        </section>
+
+        <!-- DEEP REFLECTION -->
+        <section id="reflection" class="content-section">
+            <h2>1. Deep Reflection</h2>
+
+            <div class="script-box">
+                <h4>Opening (00:00-00:05)</h4>
+                <p>"This morning you executed a complete innovation cycle. Now we're going to map what you did onto the Design Thinking framework. This is the handoff - I'm giving you the map for the territory you just travelled."</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Slide showing Design Thinking phases (Empathise, Define, Ideate, Prototype, Test) as loop diagram</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Map Experience to Framework (00:05-00:15)</h3>
+
+            <div class="watch-for">
+                <h4>Facilitation Moves</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>Walk through each phase of Design Thinking</li>
+                    <li>Point back to morning activities: "When you interviewed your partner - that was Empathise. When you wrote HMW statements - that was Define."</li>
+                    <li>Name what they experienced: "The false-start? That was an intervention. 'Dig deeper'? Another intervention."</li>
+                </ul>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Mural board showing morning's work tagged with Design Thinking phases</p>
+            </div>
+
+            <div class="prompts-list">
+                <h4>Facilitation Questions</h4>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li>"What shifted between empathy round 1 and round 2?"</li>
+                    <li>"What happened when you framed the problem as 'How might we...?' versus 'design a better wallet'?"</li>
+                    <li>"How did tight timing affect your work - help or hurt?"</li>
+                    <li>"What role did the Mural board play versus paper prototyping?"</li>
+                </ul>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>Expected responses:</strong> "Round 2 got more interesting" / "HMW made the problem clearer" / "Time pressure forced decisions" / "Mural helped us see each other's thinking"</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Name the 11 Elements (00:15-00:20)</h3>
+
+            <div class="script-box">
+                <h4>Framework Handoff</h4>
+                <p>"Right. Let me name what you experienced:</p>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li><strong>Process:</strong> Design Thinking gave you a structure - Empathise, Define, Ideate, Prototype, Test. Without it, you'd have stayed in the false-start.</li>
+                    <li><strong>Interventions:</strong> 'Dig deeper,' 'don't defend your prototype,' '7-minute build' - these are methods that push you to the next stage. HOW you're told to use tools.</li>
+                    <li><strong>Tools:</strong> Mural, paper, pens, scissors. WHAT you use.</li>
+                    <li><strong>Skills:</strong> Observation, questioning, synthesis, creative thinking, systems thinking - when you connected your partner's wallet to their life system, that's systems thinking.</li>
+                    <li><strong>Mindset:</strong> Curiosity, deferring judgement, challenging assumptions.</li>
+                    <li><strong>Behaviours:</strong> Active listening, not defending your ideas, disciplined experimentation.</li>
+                    <li><strong>Environment:</strong> Time boundaries, digital space, permission to fail.</li>
+                    <li><strong>Collaboration:</strong> Paired work, giving feedback, receiving feedback without defensiveness.</li>
+                    <li><strong>Facilitation:</strong> I managed the process, kept time, intervened when needed.</li>
+                </ul>
+                <p>All 11 elements were active this morning - the first nine explicitly, and <strong>Governance and Resources</strong> implicitly. The time you were given, the materials, the permission to experiment and fail - that's what Governance and Resources look like in practice. These are the foundations of innovation work."</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Asset Handoff (00:20-00:30)</h3>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Slide deck with IDEO Design Thinking process visual</p>
+                <p><strong>Action:</strong> Post PDF in Mural + chat ("IDEO Design Thinking Framework - keep this")</p>
+            </div>
+
+            <div class="script-box">
+                <h4>Closing</h4>
+                <p>"This is your reference. When you're back at work and someone says 'we need to innovate,' you'll have a foundational understanding of what process looks like."</p>
+            </div>
+        </section>
+
+        <!-- FAILURE ANALYSIS -->
+        <section id="failure" class="content-section">
+            <h2>2. Failure Analysis</h2>
+
+            <div class="script-box">
+                <h4>Setup (00:30-00:32)</h4>
+                <p>"Right, you brought examples of failed innovations from your context. We're going to analyse them using the framework you now have. Small groups - 3-4 people. You have 20 minutes. For each failure:</p>
+                <ol style="margin-left: 0; padding-left: 1rem;">
+                    <li>Map it onto the Design Thinking process - where did it break?</li>
+                    <li>What was missing? Which elements?</li>
+                    <li>What would have changed the outcome?"</li>
+                </ol>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Mural failure analysis workspace (columns for each Design Thinking phase)</p>
+                <p><strong>Breakout rooms:</strong> Small groups, 20 minutes</p>
+            </div>
+
+            <div class="watch-for">
+                <h4>During Breakouts (00:32-00:50)</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>Pop into rooms, listen</li>
+                    <li>Ask probing questions if groups are stuck</li>
+                    <li>Note common failure patterns for debrief</li>
+                </ul>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Debrief (00:50-00:58)</h3>
+
+            <div class="script-box">
+                <h4>Share Failures</h4>
+                <p>Each group shares one failure and diagnosis.</p>
+            </div>
+
+            <div class="watch-for">
+                <h4>Listen For Patterns</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>"We jumped to solutions" (Define phase missing)</li>
+                    <li>"We didn't talk to users" (Empathise phase missing)</li>
+                    <li>"We had the process but no time to use it" (Environment/Resources missing)</li>
+                    <li>"Leadership wanted ROI metrics during discovery" (wrong measurement, operational pressure)</li>
+                    <li>Cargo-culting, weak problem framing, missing empathy, process without defence capability</li>
+                </ul>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Pattern Recognition (00:58-01:00)</h3>
+
+            <div class="script-box">
+                <h4>Framing Close</h4>
+                <p>"Notice the patterns. Innovation fails when:</p>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li>Process is cargo-culted (we say we do Design Thinking but skip the hard parts)</li>
+                    <li>Empathy is skipped (we design for imaginary users)</li>
+                    <li>Problems are poorly framed (we solve the wrong thing well)</li>
+                    <li>Wrong metrics are applied (operational measures crush exploratory work)</li>
+                    <li>Practitioners have process skills but no organisational defence</li>
+                </ul>
+                <p>You now have a foundational diagnostic lens. You can start recognising where and why innovation breaks."</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Slide "Why Innovation Fails" (diagnostic framework)</p>
+                <p><strong>Action:</strong> Post in Mural + chat</p>
+            </div>
+        </section>
+
+        <!-- INTERVENTIONS -->
+        <section id="interventions" class="content-section">
+            <h2>3. Intervention Speed-Dating</h2>
+
+            <div class="script-box">
+                <h4>Setup (01:00-01:02)</h4>
+                <p>"You've experienced interventions this morning - 'dig deeper,' 'don't defend,' time constraints. Now you're going to try five specific methods that help you move through the innovation process. Five stations, five minutes each. You'll rotate through all of them. Each station has a method and an instruction to apply it to the Wallet Project challenge. Go fast - focus on understanding what each method does, not perfecting it."</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Mural board with 5 intervention stations pre-configured</p>
+                <p><strong>Format:</strong> Self-guided rotation through Mural stations</p>
+                <p><strong>Music:</strong> ON (low) during work phases</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>The Five Stations</h3>
+
+            <div class="prompts-list">
+                <h4>Station 1: How Might We Statements (5 mins)</h4>
+                <p>Linguistic reframing for problem definition</p>
+            </div>
+
+            <div class="prompts-list">
+                <h4>Station 2: 2x2 Prioritisation Matrix (5 mins)</h4>
+                <p>Decision-making framework (Impact vs Effort)</p>
+            </div>
+
+            <div class="prompts-list">
+                <h4>Station 3: Assumption Mapping (5 mins)</h4>
+                <p>Identify and test assumptions</p>
+            </div>
+
+            <div class="prompts-list">
+                <h4>Station 4: Stakeholder Mapping (5 mins)</h4>
+                <p>See the system around the problem</p>
+            </div>
+
+            <div class="prompts-list">
+                <h4>Station 5: SWOT Analysis (5 mins)</h4>
+                <p>Analyse strengths, weaknesses, opportunities, threats</p>
+            </div>
+
+            <div class="watch-for">
+                <h4>During Stations (01:02-01:25)</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>Monitor progress</li>
+                    <li>Answer questions as they arise</li>
+                    <li>Note which methods resonate, which feel forced</li>
+                </ul>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Debrief (01:25-01:30)</h3>
+
+            <div class="prompts-list">
+                <h4>Questions</h4>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li>"Which method felt most natural?"</li>
+                    <li>"Which felt forced?"</li>
+                    <li>"When would you use each one?"</li>
+                </ul>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>Expected responses:</strong> "HMW felt useful for problem framing" / "2x2 matrix helped prioritise" / "SWOT felt corporate" (useful observation)</p>
+            </div>
+
+            <div class="script-box">
+                <h4>Framing Close (01:29-01:30)</h4>
+                <p>"These are interventions - structured methods that help you advance the process. Some will fit your context, some won't. The point is knowing they exist and beginning to recognise when to deploy them. This is foundations work - you're building awareness of what's available, not mastery of each method."</p>
+            </div>
+        </section>
+
+        <!-- MEASUREMENT -->
+        <section id="measurement" class="content-section">
+            <h2>4. Measurement Game</h2>
+
+            <div class="script-box">
+                <h4>Setup (01:30-01:32)</h4>
+                <p>"Right, you're on a funding committee. You have budget to allocate across three innovation projects. Here are the projects:</p>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li><strong>Project A:</strong> Early empathy phase - team conducting user interviews</li>
+                    <li><strong>Project B:</strong> Mid-prototyping phase - team building and testing prototypes</li>
+                    <li><strong>Project C:</strong> Late validation phase - team assessing market fit</li>
+                </ul>
+                <p>You have these metrics to guide your decision:</p>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li>Total number of ideas generated</li>
+                    <li>ROI projection</li>
+                    <li>Number of prototypes built</li>
+                    <li>Customer satisfaction score</li>
+                    <li>Time to market</li>
+                </ul>
+                <p>You have 10 minutes. Decide how to allocate funding. Use the metrics provided."</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Mural workspace with projects listed, metrics provided, budget allocation sliders</p>
+                <p><strong>Music:</strong> ON (low) during work</p>
+            </div>
+
+            <div class="watch-for">
+                <h4>During Work (01:32-01:42)</h4>
+                <p>Let them struggle with the mismatched metrics. Don't hint at the trap.</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>Music:</strong> OFF at 01:42</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Debrief (01:42-01:48)</h3>
+
+            <div class="prompts-list">
+                <h4>Questions</h4>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li>"How did you allocate funding?"</li>
+                    <li>"Which metrics drove your decisions?"</li>
+                    <li>"Did anything feel wrong?"</li>
+                </ul>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>Expected responses:</strong> "We funded Project C because it had ROI data" / "Project A looked weak - no metrics yet" / "The metrics didn't fit the projects"</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>The Reveal (01:48-01:50)</h3>
+
+            <div class="script-box">
+                <h4>Pattern Interrupt</h4>
+                <p>"Right. Here's what just happened: I gave you completely stage-inappropriate metrics. You can't measure ROI during empathy - you don't have a solution yet. Counting ideas during validation is meaningless - you're testing fit, not generating options. But these are the metrics organisations apply to innovation all the time. And when innovation gets measured wrong, it gets killed.</p>
+                <p>Stage-appropriate measurement matters:</p>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li><strong>Empathy phase:</strong> Quality of insights, depth of understanding</li>
+                    <li><strong>Ideation phase:</strong> Diversity of concepts, not volume</li>
+                    <li><strong>Prototyping phase:</strong> Learning velocity, feedback quality</li>
+                    <li><strong>Validation phase:</strong> Evidence of fit, market signals</li>
+                </ul>
+                <p>Wrong metrics crush innovation faster than bad ideas."</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Slide "Stage-Appropriate Measurement Principles"</p>
+                <p><strong>Action:</strong> Post in Mural + chat</p>
+            </div>
+        </section>
+
+        <!-- PROBLEM SPACE MAP -->
+        <section id="problem-space" class="content-section">
+            <h2>5. Problem Space Map Demo</h2>
+
+            <div class="script-box">
+                <h4>Introduction (01:50-01:51)</h4>
+                <p>"Last thing before homework: I'm going to show you a tool called the Problem Space Map. It helps you see how your problem connects to larger patterns. You're not doing the full exercise now - I'm just demonstrating how it works."</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Problem Space Map template (screen share or Mural)</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Demo Walkthrough (01:51-01:58)</h3>
+
+            <div class="script-box">
+                <h4>Demonstrate Using Wallet Project</h4>
+                <p>Walk through 1-2 layers using Wallet Project as example:</p>
+                <ul style="margin-left: 0; padding-left: 1rem;">
+                    <li>"At the <strong>Product layer:</strong> physical wallets, digital wallets, payment cards"</li>
+                    <li>"At the <strong>System layer:</strong> banking infrastructure, retail payment systems, identity verification"</li>
+                    <li>"At the <strong>Implications layer:</strong> financial inclusion, privacy, security"</li>
+                </ul>
+                <p>"This helps you see how your problem connects to larger patterns. Where does your challenge sit? What systems does it touch? What implications ripple out from your design decisions?"</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>On screen:</strong> Show Problem Space Map layers visible (Data, Technology, Product, Experience, System, Implications)</p>
+                <p><strong>Note:</strong> No full exercise - just demo to scaffold homework</p>
+            </div>
+        </section>
+
+        <!-- HOMEWORK -->
+        <section id="homework" class="content-section">
+            <h2>6. Homework Brief</h2>
+
+            <div class="script-box">
+                <h4>Opening (02:00-02:02)</h4>
+                <p>"Right, three tasks for the week gap. These are not busy work - they bridge what you experienced today with what you'll do next week.</p>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>The Three Tasks</h3>
+
+            <div class="prompts-list">
+                <h4>Task 1: Read</h4>
+                <p>Design Thinking framework document - full process overview. Link in Mural and chat. This gives you the complete map.</p>
+            </div>
+
+            <div class="prompts-list">
+                <h4>Task 2: Map</h4>
+                <p>Use the Problem Space Map to analyse YOUR challenge - something real from your context. You've seen how it works - now apply it. Template provided. 30-45 minutes. Focus on seeing interconnections across data, tech, product, experience, system, and implications. Upload to Mural before next week.</p>
+            </div>
+
+            <div class="prompts-list">
+                <h4>Task 3: Notice</h4>
+                <p>Identify 2-3 moments in your work where Design Thinking elements would change outcomes. Bring specific examples to next week's session. These will feed our discussions.</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>Action:</strong> Post homework assets in Mural + chat:</p>
+                <ul style="margin-left: 1rem;">
+                    <li>Design Thinking framework PDF</li>
+                    <li>Problem Space Map template (link: https://dschool.stanford.edu/tools/map-the-problem-space)</li>
+                    <li>Homework submission area in Mural</li>
+                </ul>
+            </div>
+
+            <hr class="phase-divider">
+
+            <h3>Closing (02:08-02:10)</h3>
+
+            <div class="script-box">
+                <h4>Final Words</h4>
+                <p>"Today you experienced complete innovation cycles. Next week you'll do it again with conscious competence - you'll know what you're doing and why. You'll also work on governance and resources - how to advocate for what innovation needs organisationally.</p>
+                <p>This is foundations work - you'll leave with baseline literacy, not mastery. Sufficient to recognise the landscape, know what matters, and build capability through practice.</p>
+                <p>See you next week. Same time: 9:30am start for Week 2."</p>
+            </div>
+
+            <div class="cue-box">
+                <p><strong>Post-Session Actions:</strong></p>
+                <ul style="margin-left: 1rem;">
+                    <li>Save Mural board state</li>
+                    <li>Review participant work (opening provocation, failure analysis, intervention stations)</li>
+                    <li>Note patterns for Week 2 adjustments</li>
+                    <li>Check homework submissions during week gap</li>
+                    <li>Send reminder 2 days before Week 2 (homework due)</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -36,6 +36,8 @@ Involves: full attention, clarifying questions, paraphrasing to confirm understa
 
 **Building on Others' Ideas:** Using others' contributions as starting points rather than always generating from scratch. Expressed through language: "Yes, and..." rather than "No, but...". The behavioural mechanism through which cognitive diversity produces value. Requires active listening as prerequisite.
 
+**Verification Discipline (Working with AI Systems):** Systematic practice of checking AI outputs for alignment, tension, source grounding, and bias amplification before accepting or acting on them. Treats AI outputs as drafts requiring human interpretation rather than answers requiring human approval. Core principle: "Comfort with AI output is inversely correlated with verification quality." Involves running Four Gates checks routinely, resisting urge to accept first plausible output, maintaining ownership of interpretation, making verification visible to team, and treating AI failures diagnostically. This behaviour extends beyond AI - verification discipline, critical evaluation of synthesis, and maintaining interpretive ownership are fundamental to working with any delegation or automated process. See [Verification Discipline](./resources/verification_discipline.md) for detailed guidance.
+
 ## Further Reading
 
 **Key Frameworks:**

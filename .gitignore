@@ -10,3 +10,10 @@ outline.md
 Slides/_prompt_experiments/
 ideo_designThinking.md
 Elements/7_Environment/resources/gesher_school_article_transcript.md
+AI_INTEGRATION_RESEARCH.md
+.env
+.venv/
+__pycache__/
+*.pyc
+design_assets/images/
+design_assets/generation_state.json

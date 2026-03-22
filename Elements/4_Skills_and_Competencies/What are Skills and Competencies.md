@@ -28,6 +28,8 @@ These skills align closely with the fastest-growing competency requirements iden
 
 **Critical Evaluation:** Ability to assess ideas, evidence, and proposals rigorously and constructively. Includes distinguishing between personal preference and objective assessment, and between constructive challenge and destructive criticism. Essential at stage gates and decision points.
 
+**Prompt Engineering & Intent Specification:** Ability to articulate intent, specify constraints, and structure instructions such that AI tools execute desired outputs. Distinct from "talking to AI" - requires understanding what information AI needs (context, examples, success criteria, boundaries) and how to structure prompts for consistent results. Includes constraint specification (defining boundaries, requirements, exclusions), intent clarity (distinguishing between what you want and what you think you want), iterative refinement (treating prompt development as prototyping activity), source document curation (selecting and preparing materials that constrain AI generation), and output evaluation (assessing alignment between intent and execution). This skill applies beyond AI: articulating intent clearly enough for literal execution is fundamental to delegation, brief writing, requirements specification, and cross-functional collaboration. AI makes this skill visible because it executes literally, exposing ambiguity and assumption. See [Prompt Engineering](./resources/prompt_engineering.md) for detailed guidance.
+
 ## Further Reading
 
 **Capability Frameworks:**

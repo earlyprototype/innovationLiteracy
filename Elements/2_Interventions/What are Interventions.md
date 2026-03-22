@@ -32,6 +32,9 @@ Interventions span the full Design Thinking process:
 
 Full taxonomy available in `INTERVENTIONS_TAXONOMY.md` including technology adoption specific interventions at each stage.
 
+**AI-Augmented Innovation:**
+- [AI-Augmented Interventions](./resources/ai_augmented_interventions.md) - Pattern interrupts and structured methods for effective AI use across all process stages
+
 ## Further Reading
 
 **Toolset Resources:**

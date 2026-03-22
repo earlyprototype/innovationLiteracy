@@ -26,7 +26,7 @@ Ultimately, this workshop series is about pointing to things, indicating where t
 - Not theoretical - showing where concepts live in practice, not explaining them in abstract
 - Experience first - they feel it, then we name it, then we give them the map
 
-## The 11 Elements of Innovation Literacy
+## The Elements of Innovation Literacy
 
 **The What (1-3):**
 1. **Process** - Structured, repeatable activity

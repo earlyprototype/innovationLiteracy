@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovation Literacy — Colour Profiles</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #FAF9F6;
+    color: #333;
+    padding: 48px 40px;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 48px;
+  }
+  .profile {
+    margin-bottom: 56px;
+  }
+  .profile-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .profile-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #1a1a1a;
+  }
+  .profile-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  .profile-vibe {
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: #999;
+    margin-left: auto;
+  }
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+  .swatch {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e5e2dd;
+    transition: transform 0.15s ease;
+  }
+  .swatch:hover { transform: translateY(-3px); }
+  .swatch-colour {
+    height: 80px;
+    position: relative;
+  }
+  .swatch-info {
+    padding: 10px 12px;
+  }
+  .swatch-role {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888;
+    margin-bottom: 4px;
+  }
+  .swatch-name {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  .swatch-hex {
+    font-size: 0.75rem;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    color: #999;
+  }
+  /* Light background swatches get a subtle border inside */
+  .swatch-colour.light-bg {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .divider {
+    height: 1px;
+    background: #e0ddd8;
+    margin: 8px 0 48px 0;
+  }
+  footer {
+    margin-top: 64px;
+    font-size: 0.75rem;
+    color: #aaa;
+  }
+</style>
+</head>
+<body>
+
+<h1>Colour Profiles</h1>
+<p class="subtitle">Innovation Literacy Content Cards — 4 variants, 6 colours each</p>
+
+<!-- VARIANT A -->
+<div class="profile">
+  <div class="profile-header">
+    <span class="profile-letter">A</span>
+    <span class="profile-name">Terracotta + Sage</span>
+    <span class="profile-vibe">Warm editorial, grounded</span>
+  </div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#FAF9F6;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Background</div>
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#FAF9F6</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#E27D60;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Primary Accent</div>
+        <div class="swatch-name">Terracotta</div>
+        <div class="swatch-hex">#E27D60</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#85BAA1;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Secondary Accent</div>
+        <div class="swatch-name">Sage Green</div>
+        <div class="swatch-hex">#85BAA1</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#F5E6E0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Soft Tint</div>
+        <div class="swatch-name">Blush Terracotta</div>
+        <div class="swatch-hex">#F5E6E0</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#8C8279;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Neutral</div>
+        <div class="swatch-name">Warm Taupe</div>
+        <div class="swatch-hex">#8C8279</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#333333;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Text</div>
+        <div class="swatch-name">Deep Charcoal</div>
+        <div class="swatch-hex">#333333</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VARIANT B -->
+<div class="profile">
+  <div class="profile-header">
+    <span class="profile-letter">B</span>
+    <span class="profile-name">Coral + Teal</span>
+    <span class="profile-vibe">High energy, contemporary</span>
+  </div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#FAF9F6;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Background</div>
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#FAF9F6</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#FF6B6B;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Primary Accent</div>
+        <div class="swatch-name">Electric Coral</div>
+        <div class="swatch-hex">#FF6B6B</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#00E5FF;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Secondary Accent</div>
+        <div class="swatch-name">Vibrant Teal</div>
+        <div class="swatch-hex">#00E5FF</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#FFE5E5;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Soft Tint</div>
+        <div class="swatch-name">Blush</div>
+        <div class="swatch-hex">#FFE5E5</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#64748B;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Neutral</div>
+        <div class="swatch-name">Cool Slate</div>
+        <div class="swatch-hex">#64748B</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#111111;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Text</div>
+        <div class="swatch-name">Pitch Black</div>
+        <div class="swatch-hex">#111111</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VARIANT C -->
+<div class="profile">
+  <div class="profile-header">
+    <span class="profile-letter">C</span>
+    <span class="profile-name">Orange + Violet</span>
+    <span class="profile-vibe">Bold complementary, most contrast</span>
+  </div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#FAF9F6;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Background</div>
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#FAF9F6</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#E25C2B;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Primary Accent</div>
+        <div class="swatch-name">Burnt Orange</div>
+        <div class="swatch-hex">#E25C2B</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#5A3B8C;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Secondary Accent</div>
+        <div class="swatch-name">Deep Violet</div>
+        <div class="swatch-hex">#5A3B8C</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#F9E4D4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Soft Tint</div>
+        <div class="swatch-name">Warm Peach</div>
+        <div class="swatch-hex">#F9E4D4</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#B8A9C9;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Neutral</div>
+        <div class="swatch-name">Dusty Lavender</div>
+        <div class="swatch-hex">#B8A9C9</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#1A1A1A;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Text</div>
+        <div class="swatch-name">Dark Ink</div>
+        <div class="swatch-hex">#1A1A1A</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VARIANT D -->
+<div class="profile">
+  <div class="profile-header">
+    <span class="profile-letter">D</span>
+    <span class="profile-name">Amber + Teal</span>
+    <span class="profile-vibe">Premium corporate, confident</span>
+  </div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#FAF9F6;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Background</div>
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#FAF9F6</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#F2A900;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Primary Accent</div>
+        <div class="swatch-name">Amber</div>
+        <div class="swatch-hex">#F2A900</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#005B6E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Secondary Accent</div>
+        <div class="swatch-name">Deep Ocean Teal</div>
+        <div class="swatch-hex">#005B6E</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour light-bg" style="background:#FFF3D6;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Soft Tint</div>
+        <div class="swatch-name">Honey Wash</div>
+        <div class="swatch-hex">#FFF3D6</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#4A6670;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Neutral</div>
+        <div class="swatch-name">Teal Grey</div>
+        <div class="swatch-hex">#4A6670</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-colour" style="background:#1C2A33;"></div>
+      <div class="swatch-info">
+        <div class="swatch-role">Text</div>
+        <div class="swatch-name">Charcoal</div>
+        <div class="swatch-hex">#1C2A33</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>Innovation Literacy — FX2 Design Assets — Colour Spec</footer>
+
+</body>
+</html>
