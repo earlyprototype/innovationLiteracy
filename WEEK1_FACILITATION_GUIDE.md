@@ -483,6 +483,11 @@ You have 7 minutes. Write multiple versions. Pick the one that feels most genera
 - "Time pressure forced decisions"
 - "Mural helped us see each other's thinking"
 
+**Bridge to their work (00:14-00:15):**
+"Quick round - which moment this morning felt familiar from your work at Eirmersive? Where have you seen these patterns before?"
+
+**Purpose:** Connect abstract experience to their lived context. Validates that morning's challenges mirror real work. Opens door for afternoon's deeper application.
+
 **Facilitator framing (00:15-00:20):**
 "Right. Let me name what you experienced:
 - **Process:** Design Thinking gave you a structure - Empathise, Define, Ideate, Prototype, Test. Without it, you'd have stayed in the false-start.
@@ -515,12 +520,16 @@ All 11 elements were active this morning — the first nine explicitly, and Gove
 **On screen:** Mural failure analysis workspace (columns for each Design Thinking phase)
 
 **Facilitator script (00:30-00:32):**
-"Right, you brought examples of failed innovations from your context. We're going to analyse them using the framework you now have. Small groups - 3-4 people. You have 20 minutes. For each failure:
+"Right, you brought examples of failed innovations from your context. We're going to analyse them using the framework you now have. You'll work together as one group. You have 20 minutes. For each failure:
 1. Map it onto the Design Thinking process - where did it break?
 2. What was missing? Which elements?
-3. What would have changed the outcome?"
+3. What would have changed the outcome?
 
-**Breakout rooms:** Small groups, 20 minutes
+**Ground rule:** This is diagnostic work, not blame. We're looking at systems and patterns, not finger-pointing. What you share here stays here."
+
+**Working mode:** Single group of 3 (same company), 20 minutes
+
+**Facilitator note:** Same-company dynamics require careful handling. They may self-censor or conversely overshare organizational dysfunction. Your role is to keep focus on learning patterns, not venting grievances.
 
 **What participants do:**
 - Share failure examples
@@ -528,21 +537,33 @@ All 11 elements were active this morning — the first nine explicitly, and Gove
 - Identify missing elements using morning's framework
 - Document patterns
 
-**Facilitator during breakouts:**
-- Pop into rooms, listen, ask probing questions
-- Note common failure patterns for debrief
+**Facilitator during session (00:32-00:50):**
+- Stay present but not hovering - give them space to talk openly
+- Listen for: Are they analyzing or blaming? Are they connecting to framework or just storytelling?
+- Intervene if stuck: "Where on the Design Thinking map does this sit? What phase broke?"
+- Watch for: One person dominating, defensiveness, avoiding real issues
+- Note patterns for debrief - especially if they identify same failure modes repeatedly
+
+**Probing questions if needed:**
+- "Was this an empathy failure, a problem framing failure, or something else?"
+- "Which of the 11 elements was missing or weak?"
+- "If you ran this project again tomorrow, what would you do differently in the first week?"
 
 **Return to main room (00:50)**
 
 **Debrief (00:50-00:58):**
-- Each group shares one failure and diagnosis
-- Facilitator listens for patterns: cargo-culting, wrong metrics, missing empathy, weak problem framing, process without defence capability
+"Right, what patterns did you see? Not just 'this project failed' - what failure modes keep appearing?"
 
-**Expected patterns:**
-- "We jumped to solutions" (Define phase missing)
-- "We didn't talk to users" (Empathise phase missing)
-- "We had the process but no time to use it" (Environment/Resources missing)
-- "Leadership wanted ROI metrics during discovery" (wrong measurement, operational pressure)
+**Listen for and name:**
+- Solution jumping (skipping empathy/define)
+- Wrong metrics applied (ROI during discovery)
+- Process cargo-culting (say Design Thinking, skip hard parts)
+- Missing organizational defence (skills exist but no protection to use them)
+
+**Key facilitation move (00:56-00:58):**
+"Here's what I'm hearing: [name 2-3 patterns]. These aren't unique to Eirmersive - they're systemic failure modes in organizations trying to innovate. The question isn't 'why did these projects fail?' The question is: **what conditions would allow them to succeed?** That's governance work - Week 2 territory."
+
+**Purpose:** Shift from problem identification to solution orientation. Plant seed for governance/resources work next week.
 
 **Facilitator framing (00:58-01:00):**
 "Notice the patterns. Innovation fails when:
@@ -584,13 +605,16 @@ You now have a foundational diagnostic lens. You can start recognising where and
 
 **Each station contains:**
 - Method description (1-2 sentences)
-- Instruction: "Apply this to the Wallet Project"
+- Instruction 1: "Apply this to the Wallet Project"
+- Instruction 2: "Note one place in your current Eirmersive work where this method could apply"
 - Workspace for doing the exercise
 
 **Timing:**
 - 5 minutes per station
 - 25 minutes total
 - Participants move through at own pace
+
+**Facilitator note:** The second instruction is critical - it bridges abstract learning to real application. Watch Mural boards - are they making concrete connections or staying abstract?
 
 **Facilitator during stations:**
 - Monitor progress
@@ -604,13 +628,18 @@ You now have a foundational diagnostic lens. You can start recognising where and
 **Debrief (01:25-01:30):**
 - "Which method felt most natural?"
 - "Which felt forced?"
-- "When would you use each one?"
+- "Which one could you use next week at Eirmersive? What would you apply it to?"
 
 **Expected responses:**
 - "HMW felt useful for problem framing"
 - "2x2 matrix helped prioritise"
 - "5 Whys helped find the real problem"
 - "Assumption mapping was eye-opening"
+
+**Follow-up probe:**
+"You noted [specific application from their boards]. What would happen if you actually did that? What's stopping you?"
+
+**Purpose:** Bridge awareness to action. Surface organizational barriers. Set up governance conversation.
 
 **Facilitator framing (01:29-01:30):**
 "These are interventions - structured methods that help you advance the process. Some will fit your context, some won't. The point is knowing they exist and beginning to recognise when to deploy them. This is foundations work - you're building awareness of what's available, not mastery of each method."
@@ -675,6 +704,13 @@ Stage-appropriate measurement matters:
 - Validation phase: Evidence of fit, market signals
 
 Wrong metrics crush innovation faster than bad ideas."
+
+**Bridge to their context (01:50):**
+"Quick check: What metrics are you measured by at Eirmersive when you're working on innovation projects? Are they stage-appropriate or are you getting crushed by operational measures during exploratory work?"
+
+**Listen for:** Tension between innovation needs and organizational measurement systems. Don't solve it now - note it for Week 2 governance work.
+
+**Purpose:** Make the lesson personal and visceral. They've felt the trap in the exercise; now they see it in their work.
 
 **Framework handoff:**
 - **On screen:** Slide "Stage-Appropriate Measurement Principles"
