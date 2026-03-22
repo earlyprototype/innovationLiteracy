@@ -5,11 +5,21 @@
 **System Instruction:**
 You are an expert Information Designer and Infographic specialist. Generate a Super-Resolution 4K (3840x2160) high-fidelity 16:9 infographic. This is a flat digital UI graphic, edge-to-edge. Use brilliant text-rendering with absolute typographic precision and zero compression artifacts.
 
-**Content to Display:**
+---
 
-- **Title:** Facilitation: Pre-Session Preparation (large, bold serif, positioned top-left with generous breathing room)
-- **Subtitle:** **Match AI tool to task:** (humanist sans-serif, light weight, directly beneath)
-- **Card type label:** CHECKLIST (small caps, top-right, violet) · FACILITATION (small caps, bold top-right, orange)
+## Text Content (render exactly as written)
+
+Title: Facilitation: Pre-Session Preparation
+Subtitle: **Match AI tool to task:**
+Card type label: CHECKLIST · FACILITATION
+
+## Text Styling (uniform across all title cards)
+
+Title: large, bold serif, positioned top-left with generous breathing room. A thin primary accent underline (2px) beneath.
+Subtitle: humanist sans-serif, light weight, directly beneath the title.
+Card type label: small caps, top-right. First term in violet, second term in bold orange.
+
+---
 
 (Note: This is a title card — the visual metaphor is the star. Text is minimal and positioned to frame the illustration, not compete with it. No bullet points. No frameworks. No matrices. Just the title, subtitle, and the visual.)
 
@@ -29,6 +39,6 @@ A flat vector illustration of: A facilitators preparation workspace before a ses
 The canvas has a deliberate 240pt horizontal bar in background colour imposing itself on top of all other visual elements, approximately two-thirds from the left edge of the image. The gap is always in the same position. It should feel like a purposeful pause.
 
 **SIGNATURE DETAIL — The Oversized Ghost Number:**
-The number "9" is rendered at approximately 1000pt in a refined serif typeface, at only 4% opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#1A1A1A) at 4% opacity so it appears as a faint impression on the off-white background. It sits behind all other content and should never interfere with readability.
+The number "9" is rendered at approximately 1000pt in a refined serif typeface, at only four percent opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#1A1A1A) so it appears as a faint impression on the off-white background. It sits behind all other content and should never interfere with readability.
 
 **STRICT REQUIREMENT:** Must be a flat 2D vector-style infographic. Text must be perfectly readable and ultra-sharp. No 3D objects. No photos. Just pure high-DPI digital information design. Lossless quality render.

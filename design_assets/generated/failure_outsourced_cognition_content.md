@@ -12,7 +12,7 @@ A premium editorial diagnostic analysis infographic presenting "What Happens", "
 
 ## Compositional Structure
 
-The layout is divided into three horizontal zones on a cool white background (`#F8F9FA`):
+The layout is divided into three horizontal zones on a cream background (`#FAF9F6`):
 
 ### Header Zone (top of frame)
 - **Title:** Failure Mode 4: Outsourced Cognition — large bold serif, left-aligned, generous breathing room.
@@ -35,15 +35,17 @@ Key points from "How It Shows Up" rendered as accent-coloured square bullets: "S
 ---
 
 **Visual Aesthetic & Palette:**
-- **Background:** Cool white (`#F8F9FA`).
+- **Background:** Cream (`#FAF9F6`).
 - Primary Accent: Electric Coral (`#FF6B6B`) for title underline, emphasis highlights, key statement left-border rules, and category tag fills.
 - Secondary Accent: Vibrant Teal (`#00E5FF`) for metadata labels, element name, diagram outlines, timeline connectors, and process step circles.
+- Soft Tint: Blush (`#FFE5E5`) for light fills, callout backgrounds, tag surfaces.
+- Neutral: Cool Slate (`#64748B`) for secondary text, borders, dividers.
 - Text Color: Pitch Black (`#111111`).
 
 **SIGNATURE DETAIL — The Interrupted Rule:**
 The canvas has a deliberate 240pt horizontal bar in background colour imposing itself on top of all other visual elements, approximately two-thirds from the left edge of the image. The gap is always in the same position. It should feel like a purposeful pause.
 
 **SIGNATURE DETAIL — The Oversized Ghost Number:**
-The number "3" is rendered at approximately 1000pt in a refined serif typeface, at only 4% opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#111111) at 4% opacity so it appears as a faint impression on the white background. It sits behind all other content and should never interfere with readability.
+The number "3" is rendered at approximately 1000pt in a refined serif typeface, at only four percent opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#111111) so it appears as a faint impression on the white background. It sits behind all other content and should never interfere with readability.
 
 **STRICT REQUIREMENT:** Must be a flat 2D vector-style infographic. Text must be perfectly readable and ultra-sharp. No 3D objects. No photos. Just pure high-DPI digital information design. Lossless quality render.

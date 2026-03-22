@@ -1,4 +1,4 @@
-# Prompt: Innovation Charters & Boundaries — Title Card (b_coral_teal)
+# Prompt: Failure Mode 5: Hallucination Acceptance — Title Card (b_coral_teal)
 
 **Target Image Ratio:** 16:9
 
@@ -9,9 +9,9 @@ You are an expert Information Designer and Infographic specialist. Generate a Su
 
 ## Text Content (render exactly as written)
 
-Title: Innovation Charters & Boundaries
-Subtitle: Innovation and operations operate under opposed paradigms.
-Card type label: REFERENCE CARD · GOVERNANCE
+Title: Failure Mode 5: Hallucination Acceptance
+Subtitle: AI generates plausible but inaccurate information.
+Card type label: DIAGNOSTIC CARD · TOOLS
 
 ## Text Styling (uniform across all title cards)
 
@@ -24,8 +24,7 @@ Card type label: small caps, top-right. First term in teal, second term in bold 
 (Note: This is a title card — the visual metaphor is the star. Text is minimal and positioned to frame the illustration, not compete with it. No bullet points. No frameworks. No matrices. Just the title, subtitle, and the visual.)
 
 **Visual Concept:**
-A flat vector illustration of: A charter document with clear boundaries drawn around an innovation teams authority — permissions and limits made explicit. Rendered as clean geometric shapes with solid colour fills on the background. Abstract and evocative — not literal. No text rendered in the illustration.
-<!-- image_meta_description: A charter document with clear boundaries drawn around an innovation teams authority — permissions and limits made explicit. -->
+A flat vector illustration of: A confident document filled with footnotes — but when you look closely, every citation number leads to a blank page. Rendered as clean geometric shapes with solid colour fills on the background. Abstract and evocative — not literal. No text rendered in the illustration.
 
 **Visual Aesthetic & Palette:**
 
@@ -39,6 +38,6 @@ A flat vector illustration of: A charter document with clear boundaries drawn ar
 The canvas has a deliberate 240pt horizontal bar in background colour imposing itself on top of all other visual elements, approximately two-thirds from the left edge of the image. The gap is always in the same position. It should feel like a purposeful pause.
 
 **SIGNATURE DETAIL — The Oversized Ghost Number:**
-The number "10" is rendered at approximately 1000pt in a refined serif typeface, at only four percent opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#111111) so it appears as a faint impression on the cream background. It sits behind all other content and should never interfere with readability.
+The number "3" is rendered at approximately 1000pt in a refined serif typeface, at only 4% opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#111111) at 4% opacity so it appears as a faint impression on the cream background. It sits behind all other content and should never interfere with readability.
 
 **STRICT REQUIREMENT:** Must be a flat 2D vector-style infographic. Text must be perfectly readable and ultra-sharp. No 3D objects. No photos. Just pure high-DPI digital information design. Lossless quality render.

@@ -58,6 +58,6 @@ If the card has both a timeline AND principles, place the timeline centre-right 
 The canvas has a deliberate 240pt horizontal bar in background colour imposing itself on top of all other visual elements, approximately two-thirds from the left edge of the image. The gap is always in the same position. It should feel like a purposeful pause.
 
 **SIGNATURE DETAIL — The Oversized Ghost Number:**
-The number "{{GHOST_NUMBER}}" is rendered at approximately 1000pt in a refined serif typeface, at only 4% opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#111111) at 4% opacity so it appears as a faint impression on the white background. It sits behind all other content and should never interfere with readability.
+The number "{{GHOST_NUMBER}}" is rendered at approximately 1000pt in a refined serif typeface, at only four percent opacity, positioned in the right area of the card, partially cut off and bleeding off the edge. The number is in charcoal (#111111) so it appears as a faint impression on the white background. It sits behind all other content and should never interfere with readability.
 
 **STRICT REQUIREMENT:** Must be a flat 2D vector-style infographic. Text must be perfectly readable and ultra-sharp. No 3D objects. No photos. Just pure high-DPI digital information design. Lossless quality render.
